@@ -47,7 +47,7 @@
 <body>
 
     <nav id="navbar"
-        class="w-full flex justify-center px-4 lg:px-16 lg:py-2 pb-2 lg:pb-0 lg:pt-6 fixed left-0 top-0 z-50 transition-all duration-300">
+        class="w-full flex justify-center px-4 md:px-8 lg:px-16 lg:py-2 pb-2 lg:pb-0 pt-4 md:pt-5 lg:pt-6 fixed left-0 top-0 z-50 transition-all duration-300">
         <!-- Centered Align Container  -->
         <div class="w-full flex justify-between items-center lg:items-start">
             <!-- Left Side Logo Container  -->
@@ -93,7 +93,7 @@
 
         <!-- Mobile Menu Slider  -->
         <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-black z-40 transform -translate-y-full">
-            <div class="flex flex-col items-center justify-center h-full gap-8 px-8">
+            <div class="flex flex-col items-center justify-center h-full gap-[1.5rem] px-8">
                 <a href="#home"
                     class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
                 <a href="#overview"
@@ -125,18 +125,18 @@
 
         <!-- Fixed Position Objects  -->
         <!-- Object 1 - WhatsApp Icon -->
-        <div class="fixed z-20 right-[5px] top-[31%] w-[35px]">
+        <div class="fixed z-20 right-[5px] top-[22%] sm:top-[31%] w-[35px]">
             <img src="img/icns/whatsapp.png" alt="WhatsApp Icon" class="w-full h-auto cursor-pointer object-contain">
         </div>
 
         <!-- Object 2 - Call Icon -->
-        <div class="fixed z-20 right-[5px] top-[40%] translate-y-[-50%] w-[35px]">
+        <div class="fixed z-20 right-[5px] top-[34%] sm:top-[40%] translate-y-[-50%] w-[35px]">
             <img src="img/icns/call.png" alt="Call Icon" class="w-full cursor-pointer h-auto object-contain">
         </div>
 
         <!-- Object 3 - Enquire Now Button -->
         <button
-            class="fixed z-20 right-[-60px] top-[55%] translate-y-[-50%] w-[152px] h-[46px] bg-[#DE8063] text-white flex justify-center items-center cursor-pointer rotate-90">
+            class="fixed z-20 right-[-60px] top-[56%] sm:top-[55%] translate-y-[-50%] w-[152px] h-[46px] bg-[#DE8063] text-white flex justify-center items-center cursor-pointer rotate-90">
             <p class="font-[600] text-[17px] text-white">
                 Enquire Now
             </p>
@@ -194,62 +194,9 @@
                 </div>
             </div>
 
-            <!-- Background Image Slider Container  -->
-            <div id="hero-slider" class="absolute left-0 -top-2 w-full h-full z-0 overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="hero-slide absolute inset-0 opacity-100">
-                    <img src="img/s1/banner1.jpg" alt="Hero Background 1" class="w-full h-full object-cover">
-                </div>
-                <!-- Slide 2 -->
-                <div class="hero-slide absolute inset-0 opacity-0">
-                    <img src="img/s1/banner1.jpg" alt="Hero Background 2" class="w-full h-full object-cover">
-                </div>
-                <!-- Slide 3 -->
-                <div class="hero-slide absolute inset-0 opacity-0">
-                    <img src="img/s1/banner1.jpg" alt="Hero Background 3" class="w-full h-full object-cover">
-                </div>
-                <!-- Slide 4 -->
-                <div class="hero-slide absolute inset-0 opacity-0">
-                    <img src="img/s1/banner1.jpg" alt="Hero Background 4" class="w-full h-full object-cover">
-                </div>
-                <!-- Slide 5 -->
-                <div class="hero-slide absolute inset-0 opacity-0">
-                    <img src="img/s1/banner1.jpg" alt="Hero Background 5" class="w-full h-full object-cover">
-                </div>
-            </div>
-
-            <!-- Pagination Dots Container  -->
-            <div id="pagination-dots"
-                class="absolute bottom-4 sm:bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 justify-center items-center z-20">
-                <div class="pagination-dot w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] md:w-[18px] md:h-[18px] border border-[#ffffff] flex justify-center items-center rounded-full cursor-pointer transition-all duration-300 active"
-                    data-slide="0">
-                    <div class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full">
-                    </div>
-                </div>
-                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
-                    data-slide="1">
-                    <div
-                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
-                    </div>
-                </div>
-                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
-                    data-slide="2">
-                    <div
-                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
-                    </div>
-                </div>
-                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
-                    data-slide="3">
-                    <div
-                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
-                    </div>
-                </div>
-                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
-                    data-slide="4">
-                    <div
-                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
-                    </div>
-                </div>
+            <!-- Background Image  -->
+            <div class="absolute left-0 -top-2 w-full h-full z-0 overflow-hidden">
+                <img src="img/s1/banner1.jpg" alt="Hero Background" class="w-full h-full object-cover">
             </div>
         </section>
 
@@ -266,7 +213,7 @@
                         <p class="font-[600] text-[11px] sm:text-[12px] md:text-[13px] uppercase text-[#A27140] font-open-sans">
                             Overview</p>
                         <h2
-                            class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] w-full lg:w-[258px] font-montserrat">
+                            class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] w-full lg:w-[258px] font-montserrat leading-[1.25] sm:leading-[50px]">
                             The Gulshan Standard of Living</h2>
                     </div>
                     <!-- Bottom Content Container  -->
@@ -299,7 +246,7 @@
                     <!-- Right Side Content Container  -->
                     <div class="h-auto lg:h-full flex flex-col justify-between w-full lg:w-auto">
                         <!-- Top Content Container   -->
-                        <div class="w-full lg:w-[432px] bg-black px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 flex">
+                        <div class="w-full lg:w-[432px] px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 flex mt-6 sm:mt-8 md:mt-10 lg:-mt-4 bg-cover bg-center bg-no-repeat" style="background-image: url('img/s2/s2-bg.png'); background-color: #000;">
                             <ul class="flex flex-col gap-3 sm:gap-6">
                                 <li>
                                     <div class="flex gap-2">
@@ -332,7 +279,7 @@
                         <!-- Bottom Content Container   -->
                         <div
                             class="w-full lg:w-[432px] text-center lg:text-start items-center lg:items-start lg:px-10 pt-4 sm:pt-5 md:pt-6 flex flex-col justify-between h-full gap-4">
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black font-open-sans">
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black font-open-sans leading-[28px] w-full min-w-0 sm:min-w-[373px] px-6 sm:px-6 lg:px-0">
                                 Gulshan Empire rises as a defining residential development within Wave City, spread
                                 across 5.5 acres. Defined by architectural clarity and spatial generosity, each 3 and 4
                                 bedroom residence carries forward a legacy of excellence. Thoughtfully planned
@@ -362,7 +309,7 @@
             <!-- Centered Align Container  -->
             <div class="w-full flex flex-col gap-6 sm:gap-7 md:gap-8">
                 <!-- Top Content Container  -->
-                <div class="w-full flex flex-col justify-center items-center text-center gap-2 px-4 sm:px-6">
+                <div class="w-full flex flex-col justify-center items-center text-center gap-2 px-4 sm:px-6 md:px-8">
                     <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">
                         Key Highlights
                     </h3>
@@ -373,7 +320,7 @@
                 <!-- Bottom Content Container  -->
                 <div class="w-full bg-black relative overflow-hidden">
                     <div
-                        class="w-full h-auto sm:h-[350px] md:h-[380px] lg:h-[412px] flex flex-col lg:flex-row gap-6 lg:gap-10 container pb-6 lg:pb-0 lg:py-0">
+                        class="w-full h-auto sm:h-[350px] md:h-[380px] lg:h-[412px] flex flex-col lg:flex-row gap-6 md:gap-7 lg:gap-10 container pb-6 md:pb-8 lg:pb-0 lg:py-0">
                         <!-- Left Side Content Container  -->
                         <div
                             class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-full w-full lg:w-auto flex justify-center lg:justify-start">
@@ -381,7 +328,7 @@
                         </div>
 
                         <!-- Right side content container  -->
-                        <div class="flex h-full flex-col justify-around px-4 lg:px-0 py-3 gap-4 lg:gap-0">
+                        <div class="flex h-full flex-col justify-around px-4 md:px-6 lg:px-0 py-3 gap-4 md:gap-5 lg:gap-0">
 
                             <!-- Row Card 1  -->
                             <div class="flex gap-3 sm:gap-4 border-b border-[#EAC4B833] pb-4 sm:pb-5 lg:pb-8">
@@ -434,8 +381,7 @@
                                     <p class="font-[700] text-[16px] sm:text-[17px] md:text-[18px] text-white font-montserrat">Garden
                                         Residences</p>
                                     <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">
-                                        Ground-floor homes with private garden access</p>   
-                                        access</p>
+                                        Ground-floor homes with private garden access</p>
                                 </div>
                             </div>
 
@@ -581,13 +527,12 @@
                         wellness, and everyday
                         convenience.</p>
                     <button
-                        class="w-full sm:w-[180px] md:w-[200px] lg:w-[243px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px]">
-                        <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans">
+                        class="w-full sm:w-auto sm:min-w-[180px] md:min-w-[200px] lg:min-w-[243px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] whitespace-nowrap">
+                        <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans whitespace-nowrap">
                             View more Amenities
-
                         </p>
                         <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
-                            class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                            class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain flex-shrink-0">
                     </button>
                 </div>
             </div>
@@ -634,12 +579,12 @@
                     <!-- Bottom Button Container  -->
                     <div class="flex justify-center items-center w-full px-4 sm:px-0">
                         <button
-                            class="w-full sm:w-[280px] md:w-[310px] lg:w-[340px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px]">
-                            <p class="font-[600] text-[13px] sm:text-[14px] text-white text-center">
+                            class="w-full max-w-full sm:w-auto sm:min-w-[280px] md:min-w-[310px] lg:min-w-[340px] bg-[#DE8063] text-white gap-2 px-4 sm:px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] whitespace-nowrap">
+                            <p class="font-[600] text-[11px] sm:text-[13px] md:text-[14px] text-white text-center whitespace-nowrap">
                                 Download Floor Plans + Price Sheet
                             </p>
                             <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
-                                class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                                class="w-[16px] sm:w-[19px] md:w-[20px] h-auto object-contain flex-shrink-0">
                         </button>
                     </div>
                 </div>
@@ -695,7 +640,7 @@
 
                             <!-- Card 3  -->
                             <div
-                                class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
+                                class="w-full md:w-[240px] lg:w-[277px]  p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
                                 <img src="img/s6/Urban-Accessibility 1.png" alt=""
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
                                 <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Urban Accessibility</p>
@@ -715,8 +660,8 @@
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
                                 <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Regional Connectivity
                                 </p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Access to NH-24, Noida,
-                                    and Delhi corridors
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Access to NH-24, Noida, and<br>
+                                    Delhi corridors
                                 </p>
                             </div>
 
@@ -727,8 +672,8 @@
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
                                 <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Investment Growth Zone
                                 </p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Located within a
-                                    high-development corridor
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Located with a high development<br>
+                                    corridor
                                 </p>
                             </div>
 
@@ -766,117 +711,115 @@
             <!-- Centered Align Container  -->
             <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-9 lg:gap-10 container">
                 
-                <!-- Mobile Layout (2 Column Grid) - Visible before md -->
-                <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:hidden">
+                <!-- Mobile Layout (2 Column Grid) - Visible before lg -->
+                <div class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:hidden">
                          <!-- Card 8 - Row 4, Col 2 (Center Content) -->
                          <div
-                         class="h-[160px] flex flex-col justify-center items-center text-center py-3">
-                         <h4 class="font-[700] text-[20px] font-montserrat">Why Invest
-                             with Gulshan</h4>
+                         class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-3 min-w-0 w-full">
+                         <h4 class="font-[700] text-[18px] sm:text-[20px] md:text-[22px] font-montserrat whitespace-nowrap">Why Invest with <br/> Gulshan</h4>
                          <p
-                             class="font-[400] text-[14px] max-w-full px-2 font-montserrat">
+                             class="font-[400] text-[14px] md:text-[15px] max-w-full px-2 font-montserrat mb-6 sm:mb-8 md:mb-10 leading-snug">
                              At Gulshan, architecture is not a backdrop.
                              It is a presence</p>
                      </div>
                     <!-- Card 1 - Row 1, Col 1 -->
                     <div
-                        class="h-[160px] bg-black flex justify-center items-center text-center py-3 relative">
+                        class="h-[180px] sm:h-[170px] md:h-[170px] bg-black flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] text-white px-2 font-open-sans">
-                            Multiple landmark residential projects
-                            delivered</p>
+                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            Multiple landmark<br>residential projects<br>delivered</p>
 
                         <!-- Absolute Position Image Container  -->
                         <div
                             class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                             <img src="img/icns/elips2.png" alt=""
-                                class="w-[120px] h-[120px] object-contain">
+                                class="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] object-contain">
                         </div>
                     </div>
 
                     
                     <!-- Card 2 - Row 1, Col 2 -->
                     <div
-                        class="h-[160px] bg-black flex justify-center items-center text-center py-3 relative">
+                        class="h-[180px] sm:h-[170px] md:h-[170px] bg-black flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] text-white px-2 font-open-sans">
-                            Built for end-use and asset appreciation</p>
+                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            Built for end-use and<br>asset appreciation</p>
 
                         <!-- Absolute Position Image Container  -->
                         <div
                             class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                             <img src="img/icns/elips2.png" alt=""
-                                class="w-[120px] h-[120px] object-contain">
+                                class="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] object-contain">
                         </div>
                     </div>
 
                     <!-- Card 3 - Row 2, Col 1 -->
                     <div
-                        class="h-[160px] flex flex-col justify-center items-center text-center py-3 relative">
-                        <p class="font-[700] text-[32px] text-black font-montserrat">
+                        class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-2 sm:py-3 relative">
+                        <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat">
                             30+</p>
-                        <p class="font-[400] text-[14px] max-w-[80%] text-center font-open-sans">
-                            Years of development presence</p>
+                        <p class="font-[400] text-[14px] md:text-[15px] max-w-[90%] text-center font-open-sans leading-snug px-2">
+                            Years of development<br>presence</p>
                     </div>
 
                     <!-- Card 4 - Row 2, Col 2 -->
                     <div
-                        class="h-[160px] bg-[#DE8063] flex justify-center items-center text-center py-3 relative">
+                        class="h-[180px] sm:h-[170px] md:h-[170px] bg-[#DE8063] flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] text-center text-white max-w-[65%] px-2 font-open-sans">
-                            Construction-led execution model
+                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            Construction-led<br>execution<br>model
                         </p>
 
                         <!-- Absolute Position Image Container  -->
                         <div
                             class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                             <img src="img/icns/elips3.png" alt=""
-                                class="w-[120px] h-[120px] object-contain">
+                                class="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] object-contain">
                         </div>
                     </div>
 
                     <!-- Card 5 - Row 3, Col 1 -->
                     <div
-                        class="h-[160px]">
+                        class="h-[180px] sm:h-[170px] md:h-[170px]">
                         <img src="img/s7/img1-s7.jpg" alt="" class="w-full h-full object-cover">
                     </div>
                        <!-- Card 7 - Row 4, Col 1 -->
                        <div
-                       class="h-[160px] flex flex-col justify-center items-center text-center py-3 relative">
-                       <p class="font-[700] text-[32px] text-black font-montserrat">
+                       class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-2 sm:py-3 relative">
+                       <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat">
                            7500+</p>
-                       <p class="font-[400] text-[14px] max-w-[80%] text-center font-open-sans">
+                       <p class="font-[400] text-[14px] md:text-[15px] max-w-[90%] text-center font-open-sans leading-snug px-2">
                            Trusted by Families</p>
                    </div>
 
 
                     <!-- Card 6 - Row 3, Col 2 -->
                     <div
-                        class="h-[160px] bg-[#DE8063] flex justify-center items-center text-center py-3 relative">
+                        class="h-[180px] sm:h-[170px] md:h-[170px] bg-[#DE8063] flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] text-center text-white max-w-[55%] px-2 font-open-sans">
-                            Planned community developments</p>
+                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            Planned community<br>developments</p>
 
                         <!-- Absolute Position Image Container  -->
                         <div
                             class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                             <img src="img/icns/elips3.png" alt=""
-                                class="w-[120px] h-[120px] object-contain">
+                                class="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] object-contain">
                         </div>
                     </div>
 
-                     <!-- Card 6 - Row 3, Col 2 -->
+                     <!-- Card 6 - Row 3, Col 2 (md 3-col layout duplicate) -->
                      <div
-                     class="h-[160px] hidden md:flex bg-[#DE8063] justify-center items-center text-center py-3 relative">
+                     class="h-[180px] sm:h-[170px] md:h-[170px] hidden md:flex bg-[#DE8063] justify-center items-center text-center py-2 sm:py-3 relative">
                      <p
-                         class="font-[600] text-[14px] text-center text-white max-w-[55%] px-2 font-open-sans">
-                         Planned community developments</p>
+                         class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                         Planned community<br>developments</p>
 
                      <!-- Absolute Position Image Container  -->
                      <div
                          class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                          <img src="img/icns/elips3.png" alt=""
-                             class="w-[120px] h-[120px] object-contain">
+                             class="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] object-contain">
                      </div>
                  </div>
 
@@ -906,11 +849,10 @@
 
                         <!-- Card 2 Content Container  -->
                         <div
-                            class="h-auto md:h-full flex flex-col justify-center items-center text-center py-4 md:py-0 w-full md:w-auto">
-                            <h4 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">Why Invest
-                                with Gulshan</h4>
+                            class="h-auto md:h-full flex flex-col justify-center items-center text-center py-4 md:py-0 w-full md:w-auto lg:pb-4">
+                            <h4 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">Why Invest with Gulshan</h4>
                             <p
-                                class="font-[400] text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] max-w-full md:max-w-[458px] px-4 md:px-0 font-montserrat">
+                                class="font-[400] text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] max-w-full md:max-w-[575px] px-4 md:px-0 font-montserrat leading-[42px] mb-6 sm:mb-8 md:mb-10 lg:mb-12">
                                 At Gulshan, architecture is not a backdrop.
                                 It is a presence</p>
                         </div>
@@ -933,7 +875,7 @@
 
                     </div>
                     <div
-                        class="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap justify-between gap-3 sm:gap-4 md:gap-2">
+                        class="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap justify-between gap-3 sm:gap-4 md:gap-2 -mt-2 md:-mt-3 lg:-mt-4">
                         <!-- Card 1  -->
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
@@ -1018,7 +960,7 @@
                     class="border border-[#F5E9E5] flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 py-8 sm:py-12 md:py-16 lg:py-[70px] px-4 sm:px-6 md:px-12 lg:px-20 text-center w-full lg:w-auto">
                     <p class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">About Developer</p>
                     <p
-                        class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-full lg:max-w-[700px] px-2 sm:px-0 font-open-sans">
+                        class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-full lg:max-w-[729px] px-2 sm:px-0 font-open-sans">
                         Established in 1989, <span class="font-[700]">Gulshan</span>
                         Group has blossomed into a prominent player in India's real estate landscape, redefining
                         standards with accolades for design and quality. We imbue each venture with a touch of our
@@ -1030,7 +972,7 @@
 
         <!-- Section 9 Is Starting From Here     -->
         <section id="contact"
-            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative bg-[#FFEEE9] overflow-hidden">
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-10 md:pr-14 lg:px-16 lg:pr-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative bg-[#FFEEE9] overflow-hidden">
             <!-- Centered Align Container  -->
             <div class="w-full relative flex flex-col justify-between gap-6 sm:gap-7 md:gap-8 container">
 
@@ -1041,16 +983,16 @@
                 </div>
 
                 <!-- Top Row  -->
-                <div class="z-10 flex flex-col gap-3 sm:gap-4 text-center md:text-start">
-                    <h6 class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px]">"Make the Right
-                        <span class="font-[700]">Gulshan Empire <br>
+                <div class="z-10 flex flex-col gap-3 sm:gap-4 text-center md:text-start mb-[25px] md:pr-8 lg:pr-0">
+                    <h6 class="font-[400] text-[20px] sm:text-[24px] md:text-[26px] lg:text-[30px] leading-snug md:leading-normal">"Make the Right
+                        <span class="font-[700]">Gulshan Empire <br class="hidden md:block">
                             Investment!</span> with Our Experts"</h6>
                     <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px]">Secure Your Residence at Gulshan
                         Empire</p>
                 </div>
                 <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-4 z-10">
                     <!-- WhatsApp And Mail Container  -->
-                    <div class="flex hidden flex-col sm:flex-row gap-3 sm:gap-4">
+                    <div class="flex flex-row flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-5 md:gap-6 lg:gap-16 mb-1">
                         <div class="flex gap-2 items-center">
                             <img src="img/icns/whatsapp.png" alt="WhatsApp Icon"
                                 class="w-[30px] sm:w-[32px] md:w-[35px] h-auto object-contain">
@@ -1060,9 +1002,9 @@
 
                         <div class="flex gap-2 items-center">
                             <div
-                                class="w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] md:w-[35px] md:h-[35px] rounded-full bg-white flex justify-center items-center">
+                                class="w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] md:w-[35px] md:h-[35px] rounded-full bg-white flex justify-center items-center shrink-0">
                                 <img src="img/icns/mail.svg" alt="Mail Icon"
-                                    class="w-[14px] sm:w-[15px] md:w-[16px] h-auto object-contain">
+                                    class="w-[14px] sm:w-[15px] md:w-[16px] h-auto object-contain object-center block">
                             </div>
                             <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] break-all sm:break-normal">
                                 contact@gulshanempire.com</p>
@@ -1070,38 +1012,37 @@
                     </div>
 
                     <!-- Form Container  -->
-                    <div class="flex flex-col gap-3 w-full lg:w-[85%] z-10">
+                    <div class="flex flex-col gap-3 w-full lg:w-[85%] z-10 md:pr-4 lg:pr-0">
                         <form
-                            class="bg-[#FFFFFFF5] flex flex-col gap-4 sm:gap-5 md:gap-6 rounded-[5px] py-8 sm:py-10 md:py-10 px-4 sm:px-5 md:px-6">
-                            <!-- Row 1  -->
+                            class="bg-[#FFFFFFF5] flex flex-col gap-4 sm:gap-5 md:gap-6 rounded-[5px] py-8 sm:py-10 md:py-10 px-4 sm:px-5 md:px-6 overflow-hidden min-w-0">
+                            <!-- Form Grid: Row 1 & Row 2 align dividers, button stays inside -->
                             <div
-                                class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-3 w-full lg:w-[780px] justify-between">
+                                class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_1fr_180px] md:grid-cols-[1fr_1fr_1fr_200px] lg:grid-cols-[1fr_1fr_1fr_215px] gap-x-3 sm:gap-x-3 md:gap-x-4 gap-y-4 sm:gap-y-5 md:gap-y-6 w-full max-w-full min-w-0">
+                                <!-- Row 1 - Name, Phone, Email -->
                                 <input type="text" name="name"
-                                    class="flex-1 sm:flex-none sm:w-[48%] md:w-[240px] lg:w-[246px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3"
+                                    class="col-span-1 border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
                                     placeholder="Name">
 
                                 <input type="tel" name="phone"
-                                    class="flex-1 sm:flex-none sm:w-[48%] md:w-[240px] lg:w-[246px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3"
+                                    class="col-span-1 border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
                                     placeholder="Phone">
 
                                 <input type="email" name="email"
-                                    class="flex-1 sm:flex-none sm:w-[48%] md:w-[240px] lg:w-[246px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3"
+                                    class="col-span-1 sm:col-span-1 border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
                                     placeholder="Email">
-                            </div>
 
-                            <!-- Row 2  -->
-                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full lg:w-auto">
+                                <!-- Row 2 - Message spans Name+Phone+Email cols, Button in 4th -->
                                 <input type="text" name="message"
-                                    class="flex-1 lg:w-[780px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 resize-none"
+                                    class="col-span-1 sm:col-span-3 border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 resize-none min-w-0"
                                     placeholder="Message">
 
                                 <button type="submit"
-                                    class="w-full sm:w-[180px] md:w-[200px] lg:w-[215px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] cursor-pointer self-start sm:self-auto">
+                                    class="col-span-1 sm:col-span-1 w-full sm:w-auto min-w-0 bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center cursor-pointer">
                                     <p class="font-[600] text-[13px] sm:text-[14px] text-white">
                                         Get Consultation
                                     </p>
                                     <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
-                                        class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                                        class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain shrink-0">
                                 </button>
                             </div>
                         </form>
