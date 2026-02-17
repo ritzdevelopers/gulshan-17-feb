@@ -181,6 +181,47 @@ function initApp() {
         updateNavbarOnScroll(scrollY);
     });
 
+    // Data counter
+    const counterEls = document.querySelectorAll('[data-counter]');
+    const animatedCounters = new Set();
+
+    function easeOutQuart(t) {
+        return 1 - Math.pow(1 - t, 4);
+    }
+
+    function animateCounter(el) {
+        const to = parseInt(el.getAttribute('data-to'), 10);
+        const duration = parseInt(el.getAttribute('data-duration'), 10) || 2000;
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+        if (isNaN(to) || animatedCounters.has(el)) return;
+        animatedCounters.add(el);
+
+        const startTime = performance.now();
+        const startVal = 0;
+
+        function update(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = easeOutQuart(progress);
+            const current = Math.floor(startVal + (to - startVal) * eased);
+            el.textContent = prefix + current + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+            else el.textContent = prefix + to + suffix;
+        }
+        requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) animateCounter(entry.target);
+            });
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    counterEls.forEach((el) => counterObserver.observe(el));
 }
 
 // Initialize when DOM is ready and scripts are loaded

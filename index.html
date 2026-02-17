@@ -47,12 +47,12 @@
 <body>
 
     <nav id="navbar"
-        class="w-full flex justify-center px-4 md:px-8 lg:px-16 lg:py-2 pb-2 lg:pb-0 pt-4 md:pt-5 lg:pt-6 fixed left-0 top-0 z-50 transition-all duration-300">
+        class="w-full flex justify-center px-4 md:px-8 lg:px-16 lg:py-2 pb-2 lg:pb-3 pt-4 md:pt-5 lg:pt-6 fixed left-0 top-0 z-50 transition-all duration-300">
         <!-- Centered Align Container  -->
         <div class="w-full flex justify-between items-center lg:items-start">
             <!-- Left Side Logo Container  -->
-            <div id="logo-container" class="logo cursor-pointer w-[120px] md:w-[177px] transition-all duration-300" onclick="window.location.href='/'">
-                <img src="img/icns/gulshan-logo.png" alt="Gulshan Logo" class="w-full h-auto object-contain">
+            <div id="logo-container" class="logo cursor-pointer w-[120px] md:w-[177px] transition-all duration-300 pb-0.5 lg:pb-1 flex items-center" onclick="window.location.href='/'">
+                <img src="img/icns/gulshan-logo.png" alt="Gulshan Logo" class="w-full h-auto object-contain object-center">
             </div>
 
             <!-- Desktop Navigation Container  -->
@@ -220,17 +220,17 @@
                     <div class="flex flex-col w-full lg:w-auto">
                         <div
                             class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat">4</p>
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat" data-counter data-to="4" data-duration="1500">0</p>
                             <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">Towers</p>
                         </div>
                         <div
                             class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat">G+31</p>
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat" data-counter data-to="31" data-prefix="G+" data-duration="1500">G+0</p>
                             <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">Floors</p>
                         </div>
                         <div
                             class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat">3 & 4</p>
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat" data-counter data-to="4" data-prefix="3 & " data-duration="1500">3 & 0</p>
                             <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">BHK Apartments</p>
                         </div>
                     </div>
@@ -684,9 +684,8 @@
                                 <button
                                     class="w-full md:w-[240px] lg:w-[277px] bg-[#DE8063] text-white gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-[2px] flex justify-between items-center rounded-[2px]">
                                     <p
-                                        class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] text-white text-start font-open-sans">
-                                        Explore Location <br>
-                                        Highlights Nearby
+                                        class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] text-white text-start font-open-sans whitespace-nowrap md:whitespace-normal">
+                                        Explore Location <br class="hidden md:block"> Highlights Nearby
                                     </p>
                                     <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
                                         class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
@@ -756,8 +755,8 @@
                     <!-- Card 3 - Row 2, Col 1 -->
                     <div
                         class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-2 sm:py-3 relative">
-                        <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat">
-                            30+</p>
+                        <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat" data-counter data-to="30" data-suffix="+" data-duration="2000">
+                            0</p>
                         <p class="font-[400] text-[14px] md:text-[15px] max-w-[90%] text-center font-open-sans leading-snug px-2">
                             Years of development<br>presence</p>
                     </div>
@@ -786,8 +785,8 @@
                        <!-- Card 7 - Row 4, Col 1 -->
                        <div
                        class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-2 sm:py-3 relative">
-                       <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat">
-                           7500+</p>
+                       <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat" data-counter data-to="7500" data-suffix="+" data-duration="2000">
+                           0</p>
                        <p class="font-[400] text-[14px] md:text-[15px] max-w-[90%] text-center font-open-sans leading-snug px-2">
                            Trusted by Families</p>
                    </div>
@@ -879,8 +878,8 @@
                         <!-- Card 1  -->
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat">
-                                30+</p>
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat" data-counter data-to="30" data-suffix="+" data-duration="2000">
+                                0</p>
                             <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center font-open-sans">
                                 Years of development presence</p>
                         </div>
@@ -921,8 +920,8 @@
                         <!-- Card 5  -->
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat">
-                                7500+</p>
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat" data-counter data-to="7500" data-suffix="+" data-duration="2000">
+                                0</p>
                             <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center font-open-sans">
                                 Trusted by Families</p>
                         </div>
