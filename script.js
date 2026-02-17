@@ -129,41 +129,52 @@ function initApp() {
     });
 
     // Scroll detection for navbar background change
+    const logoContainer = document.getElementById('logo-container');
     let lastScroll = 0;
 
-    lenis.on('scroll', (e) => {
-        const scrollY = window.scrollY || e.scroll;
-
+    // Function to update navbar and logo on scroll
+    function updateNavbarOnScroll(scrollY) {
         if (scrollY > 100) {
-            // Scrolled down - add black background
+            // Scrolled down - add black background and decrease logo size
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
             navbar.style.backdropFilter = 'blur(10px)';
             navLinks.forEach(link => {
                 link.style.color = '#ffffff';
             });
+            // Decrease logo size
+            if (logoContainer) {
+                logoContainer.style.width = window.innerWidth >= 768 ? '140px' : '100px';
+            }
         } else {
-            // At top - transparent background
+            // At top - transparent background and restore logo size
             navbar.style.backgroundColor = 'transparent';
             navbar.style.backdropFilter = 'none';
             navLinks.forEach(link => {
                 link.style.color = '#ffffff';
             });
+            // Restore logo size
+            if (logoContainer) {
+                logoContainer.style.width = window.innerWidth >= 768 ? '177px' : '120px';
+            }
         }
+    }
 
+    lenis.on('scroll', (e) => {
+        const scrollY = window.scrollY || e.scroll;
+        updateNavbarOnScroll(scrollY);
         lastScroll = scrollY;
     });
 
     // Also listen to window scroll for immediate feedback
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
+        updateNavbarOnScroll(scrollY);
+    });
 
-        if (scrollY > 100) {
-            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.backgroundColor = 'transparent';
-            navbar.style.backdropFilter = 'none';
-        }
+    // Update logo size on window resize
+    window.addEventListener('resize', () => {
+        const scrollY = window.scrollY;
+        updateNavbarOnScroll(scrollY);
     });
 
     // Hero Slider Functionality
