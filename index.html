@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gulshan Empire rises as a defining residential development within Wave City, spread across 5.5 acres. Defined by architectural clarity and spatial generosity, each 3 and 4 bedroom residence carries forward a legacy of excellence.">
+    <meta name="keywords" content="Gulshan Empire, Wave City, residential development, 3 bedroom, 4 bedroom">
+    <meta name="author" content="Gulshan Empire">
+    <title>Gulshan Empire - Wave City</title>
+
+    <!-- Google Fonts - Montserrat and Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lenis CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Responsive CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav id="navbar"
+        class="w-full flex justify-center px-4 lg:px-16 lg:py-2 pb-2 lg:pb-0 lg:pt-6 fixed left-0 top-0 z-50 transition-all duration-300">
+        <!-- Centered Align Container  -->
+        <div class="w-full flex justify-between items-center lg:items-start">
+            <!-- Left Side Logo Container  -->
+            <div class="logo cursor-pointer w-[120px] md:w-[177px]" onclick="window.location.href='/'">
+                <img src="img/icns/gulshan-logo.png" alt="Gulshan Logo" class="w-full h-auto object-contain">
+            </div>
+
+            <!-- Desktop Navigation Container  -->
+            <div class="nav-links hidden lg:flex items-center gap-8">
+                <a href="#home"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
+                <a href="#overview"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Overview</a>
+                <a href="#highlights"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Highlights</a>
+                <a href="#amenities"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Amenities</a>
+                <a href="#floor-plan"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Floor
+                    plan</a>
+                <a href="#location"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Location</a>
+                <a href="#why-us"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Why
+                    us</a>
+                <a href="#gulshan-group"
+                    class="nav-link font-[700] text-[16px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Gulshan
+                    Group</a>
+
+                <a href="#contact"
+                    class="nav-link font-[700] text-[16px] cursor-pointer px-6 py-2 bg-[#DE8063] text-white rounded-[2px] flex justify-center items-center h-[40px] hover:bg-[#c96d4f] transition-colors">
+                    <p class="text-white">Contact</p>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button  -->
+            <button id="hamburger-btn" class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-50">
+                <span id="hamburger-line-1" class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="hamburger-line-2" class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="hamburger-line-3" class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Slider  -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-black z-40 transform -translate-y-full">
+            <div class="flex flex-col items-center justify-center h-full gap-8 px-8">
+                <a href="#home"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
+                <a href="#overview"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Overview</a>
+                <a href="#highlights"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Highlights</a>
+                <a href="#amenities"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Amenities</a>
+                <a href="#floor-plan"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Floor
+                    plan</a>
+                <a href="#location"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Location</a>
+                <a href="#why-us"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Why
+                    us</a>
+                <a href="#gulshan-group"
+                    class="mobile-nav-link font-[700] text-[24px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Gulshan
+                    Group</a>
+
+                <a href="#contact"
+                    class="font-[700] text-[18px] cursor-pointer px-8 py-3 bg-[#DE8063] text-white rounded-[2px] flex justify-center items-center hover:bg-[#c96d4f] transition-colors">
+                    <p class="text-white">Contact</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="w-full relative">
+
+        <!-- Fixed Position Objects  -->
+        <!-- Object 1 - WhatsApp Icon -->
+        <div class="fixed z-20 right-[5px] top-[31%] w-[35px]">
+            <img src="img/icns/whatsapp.png" alt="WhatsApp Icon" class="w-full h-auto cursor-pointer object-contain">
+        </div>
+
+        <!-- Object 2 - Call Icon -->
+        <div class="fixed z-20 right-[5px] top-[40%] translate-y-[-50%] w-[35px]">
+            <img src="img/icns/call.png" alt="Call Icon" class="w-full cursor-pointer h-auto object-contain">
+        </div>
+
+        <!-- Object 3 - Enquire Now Button -->
+        <button
+            class="fixed z-20 right-[-60px] top-[55%] translate-y-[-50%] w-[152px] h-[46px] bg-[#DE8063] text-white flex justify-center items-center cursor-pointer rotate-90">
+            <p class="font-[600] text-[17px] text-white">
+                Enquire Now
+            </p>
+        </button>
+
+
+        <!-- Hero Section  -->
+        <section id="home"
+            class="w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[720px] flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative">
+            <!-- Centered Align Container  -->
+            <div class="w-full h-full z-10 flex items-end">
+                <!-- Content Container  -->
+                <div class="flex flex-col justify-between gap-4 sm:gap-6 md:gap-8 w-full">
+                    <!-- Top Content Container  -->
+                    <div class="flex flex-col gap-2">
+                        <h1
+                            class="font-[500] text-[32px] sm:text-[48px] md:text-[60px] lg:text-[72px] xl:text-[80px] text-white leading-[1.1] font-montserrat">
+                            LIVE YOUR <br>
+                            LEGACY <span
+                                class="font-[400] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] text-white inline-block leading-[1.5] w-full sm:w-[300px] md:w-[320px] lg:w-[350px] mt-2 sm:mt-0 font-open-sans">
+                                Commanding 3 & 4 bedroom homes at Wave City, defined by expansive layouts, abundant
+                                light, and seamless transitions.
+                            </span></h1>
+                    </div>
+
+                    <!-- Bottom Content Container  -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <!-- Left Side Content Container  -->
+                        <div class="w-[30px] sm:w-[35px] md:w-[41px]">
+                            <img src="img/icns/chess.png" alt="Scroll Down" class="w-full h-auto object-contain">
+                        </div>
+
+                        <!-- Right Side Content Container  -->
+                        <div class="flex flex-col justify-between gap-2 sm:gap-0">
+                            <!-- Top Container  -->
+                            <div class="flex items-center gap-2">
+                                <img src="img/icns/location.svg" alt="Location Icon"
+                                    class="w-[14px] sm:w-[16px] md:w-[18px] h-auto object-contain">
+                                <p
+                                    class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] text-[#DE8063] font-montserrat flex justify-start items-start">
+                                    Wave
+                                    City, Ghaziabad</p>
+                            </div>
+
+                            <!-- Bottom Container   -->
+                            <div class="border-t border-b py-2 sm:py-3 border-[#DE8063]">
+                                <p
+                                    class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                    Configurations: <span class="font-[700]">3 BHK | 4 BHK</span>, Development Size:
+                                    <span class="font-[700]">5.5 Acres</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Image Slider Container  -->
+            <div id="hero-slider" class="absolute left-0 -top-2 w-full h-full z-0 overflow-hidden">
+                <!-- Slide 1 -->
+                <div class="hero-slide absolute inset-0 opacity-100">
+                    <img src="img/s1/banner1.jpg" alt="Hero Background 1" class="w-full h-full object-cover">
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-slide absolute inset-0 opacity-0">
+                    <img src="img/s1/banner1.jpg" alt="Hero Background 2" class="w-full h-full object-cover">
+                </div>
+                <!-- Slide 3 -->
+                <div class="hero-slide absolute inset-0 opacity-0">
+                    <img src="img/s1/banner1.jpg" alt="Hero Background 3" class="w-full h-full object-cover">
+                </div>
+                <!-- Slide 4 -->
+                <div class="hero-slide absolute inset-0 opacity-0">
+                    <img src="img/s1/banner1.jpg" alt="Hero Background 4" class="w-full h-full object-cover">
+                </div>
+                <!-- Slide 5 -->
+                <div class="hero-slide absolute inset-0 opacity-0">
+                    <img src="img/s1/banner1.jpg" alt="Hero Background 5" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Pagination Dots Container  -->
+            <div id="pagination-dots"
+                class="absolute bottom-4 sm:bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 justify-center items-center z-20">
+                <div class="pagination-dot w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] md:w-[18px] md:h-[18px] border border-[#ffffff] flex justify-center items-center rounded-full cursor-pointer transition-all duration-300 active"
+                    data-slide="0">
+                    <div class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full">
+                    </div>
+                </div>
+                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
+                    data-slide="1">
+                    <div
+                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
+                    </div>
+                </div>
+                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
+                    data-slide="2">
+                    <div
+                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
+                    </div>
+                </div>
+                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
+                    data-slide="3">
+                    <div
+                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
+                    </div>
+                </div>
+                <div class="pagination-dot w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex justify-center items-center bg-[#DE8063] rounded-full cursor-pointer transition-all duration-300"
+                    data-slide="4">
+                    <div
+                        class="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-white rounded-full hidden">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 2 Is Starting From Here  -->
+        <section id="overview"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] border-b border-[#EAC4B8] relative">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-0 container">
+                <!-- Left Side Container   -->
+                <div class="flex flex-col justify-between w-full lg:w-auto">
+                    <!-- Top Content  -->
+                    <div class="flex flex-col mb-6 lg:mb-0 text-center lg:text-start">
+                        <p class="font-[600] text-[11px] sm:text-[12px] md:text-[13px] uppercase text-[#A27140] font-open-sans">
+                            Overview</p>
+                        <h2
+                            class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] w-full lg:w-[258px] font-montserrat">
+                            The Gulshan Standard of Living</h2>
+                    </div>
+                    <!-- Bottom Content Container  -->
+                    <div class="flex flex-col w-full lg:w-auto">
+                        <div
+                            class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat">4</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">Towers</p>
+                        </div>
+                        <div
+                            class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat">G+31</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">Floors</p>
+                        </div>
+                        <div
+                            class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat">3 & 4</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">BHK Apartments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Content Container  -->
+                <div class="w-full lg:w-full h-auto lg:h-[573px] flex flex-col lg:flex-row items-stretch">
+                    <!-- Left Side Content Container  -->
+                    <div class="w-full lg:w-[573px] h-[360px]  md:h-[606px] lg:h-full">
+                        <img src="img/s2/s2-img1.png" alt="Gulshan Empire" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Right Side Content Container  -->
+                    <div class="h-auto lg:h-full flex flex-col justify-between w-full lg:w-auto">
+                        <!-- Top Content Container   -->
+                        <div class="w-full lg:w-[432px] bg-black px-6 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12 flex">
+                            <ul class="flex flex-col gap-3 sm:gap-6">
+                                <li>
+                                    <div class="flex gap-2">
+                                        <img src="img/icns/tick.svg" alt="Tick Icon"
+                                            class="w-[18px] sm:w-[20px] md:w-[23px] h-auto object-contain flex-shrink-0">
+                                        <p class="font-[600] text-[16px] sm:text-[17px] md:text-[19px] text-white font-montserrat">
+                                            Premium township positioning</p>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="flex gap-2">
+                                        <img src="img/icns/tick.svg" alt="Tick Icon"
+                                            class="w-[18px] sm:w-[20px] md:w-[23px] h-auto object-contain flex-shrink-0">
+                                        <p class="font-[600] text-[16px] sm:text-[17px] md:text-[19px] text-white font-montserrat">
+                                            Expansive 3 & 4 BHK homes</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex gap-2">
+                                        <img src="img/icns/tick.svg" alt="Tick Icon"
+                                            class="w-[18px] sm:w-[20px] md:w-[23px] h-auto object-contain flex-shrink-0">
+                                        <p class="font-[600] text-[16px] sm:text-[17px] md:text-[19px] text-white font-montserrat">
+                                            High-rise luxury towers</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Bottom Content Container   -->
+                        <div
+                            class="w-full lg:w-[432px] text-center lg:text-start items-center lg:items-start lg:px-10 pt-4 sm:pt-5 md:pt-6 flex flex-col justify-between h-full gap-4">
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black font-open-sans">
+                                Gulshan Empire rises as a defining residential development within Wave City, spread
+                                across 5.5 acres. Defined by architectural clarity and spatial generosity, each 3 and 4
+                                bedroom residence carries forward a legacy of excellence. Thoughtfully planned
+                                interiors, harmonious flow, and understated detailing ensure a living experience that is
+                                both contemporary and timeless.
+                            </p>
+
+                            <button
+                                class="w-full sm:w-[180px] md:w-[203px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] self-center lg:self-start">
+                                <p class="font-[600] text-[14px] text-white font-open-sans">
+                                    Book a Site Visit
+
+                                </p>
+                                <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
+                                    class="w-[16px] sm:w-[17px] md:w-[19px] h-auto object-contain">
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 Is Starting From Here   -->
+        <section id="highlights"
+            class="w-full flex justify-center items-center pt-8 sm:pt-12 md:pt-16 lg:pt-[70px] relative">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col gap-6 sm:gap-7 md:gap-8">
+                <!-- Top Content Container  -->
+                <div class="w-full flex flex-col justify-center items-center text-center gap-2 px-4 sm:px-6">
+                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">
+                        Key Highlights
+                    </h3>
+                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black font-montserrat">A
+                        Signature Design Language</p>
+                </div>
+
+                <!-- Bottom Content Container  -->
+                <div class="w-full bg-black relative overflow-hidden">
+                    <div
+                        class="w-full h-auto sm:h-[350px] md:h-[380px] lg:h-[412px] flex flex-col lg:flex-row gap-6 lg:gap-10 container pb-6 lg:pb-0 lg:py-0">
+                        <!-- Left Side Content Container  -->
+                        <div
+                            class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-full w-full lg:w-auto flex justify-center lg:justify-start">
+                            <img src="img/s3/s3-img1.jpg" alt="" class="w-full lg:w-auto h-full object-cover">
+                        </div>
+
+                        <!-- Right side content container  -->
+                        <div class="flex h-full flex-col justify-around px-4 lg:px-0 py-3 gap-4 lg:gap-0">
+
+                            <!-- Row Card 1  -->
+                            <div class="flex gap-3 sm:gap-4 border-b border-[#EAC4B833] pb-4 sm:pb-5 lg:pb-8">
+                                <!-- Left Side Image Container  -->
+                                <div class="w-[40px] sm:w-[45px] md:w-[51px] flex-shrink-0">
+                                    <img src="img/s3/Skyline-Presence.png" alt="Location Icon"
+                                        class="w-full h-auto object-contain">
+                                </div>
+
+                                <!-- Rigth Side Content Container   -->
+                                <div class="flex flex-col">
+                                    <p class="font-[700] text-[16px] sm:text-[17px] md:text-[18px] text-white font-montserrat">Skyline
+                                        Presence</p>
+                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">G+31
+                                        towers shaping a powerful
+                                        residential skyline</p>
+                                </div>
+                            </div>
+
+
+                            <!-- Row Card 2  -->
+                            <div class="flex gap-3 sm:gap-4 border-b border-[#EAC4B833] pb-4 sm:pb-5 lg:pb-8">
+                                <!-- Left Side Image Container  -->
+                                <div class="w-[40px] sm:w-[45px] md:w-[51px] flex-shrink-0">
+                                    <img src="img/s3/green-centric-.png" alt="Location Icon"
+                                        class="w-full h-auto object-contain">
+                                </div>
+
+                                <!-- Rigth Side Content Container   -->
+                                <div class="flex flex-col">
+                                    <p class="font-[700] text-[16px] sm:text-[17px] md:text-[18px] text-white font-montserrat">
+                                        Green-Centric Planning</p>
+                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">Large
+                                        landscaped zones anchored by a
+                                        car-free core</p>
+                                </div>
+                            </div>
+
+
+                            <!-- Row Card 3  -->
+                            <div class="flex gap-3 sm:gap-4 border-b border-[#EAC4B833]">
+                                <!-- Left Side Image Container  -->
+                                <div class="w-[40px] sm:w-[45px] md:w-[51px] flex-shrink-0">
+                                    <img src="img/s3/garden-redeinces.png" alt="Location Icon"
+                                        class="w-full h-auto object-contain">
+                                </div>
+
+                                <!-- Rigth Side Content Container   -->
+                                <div class="flex flex-col">
+                                    <p class="font-[700] text-[16px] sm:text-[17px] md:text-[18px] text-white font-montserrat">Garden
+                                        Residences</p>
+                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">
+                                        Ground-floor homes with private garden access</p>   
+                                        access</p>
+                                </div>
+                            </div>
+
+                            <!-- Row Card 4  -->
+                            <div class="flex gap-3 sm:gap-4">
+                                <!-- Left Side Image Container  -->
+                                <div class="w-[40px] sm:w-[45px] md:w-[51px] flex-shrink-0">
+                                    <img src="img/s3/Advanced-Security.png" alt="Location Icon"
+                                        class="w-full h-auto object-contain">
+                                </div>
+
+                                <!-- Rigth Side Content Container   -->
+                                <div class="flex flex-col">
+                                    <p class="font-[700] text-[16px] sm:text-[17px] md:text-[18px] text-white font-montserrat">Advanced
+                                        Security Grid</p>
+                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">Automated
+                                        monitored access</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Absolute Position Container   -->
+                    <div
+                        class="hidden md:block h-[180px] md:h-[220px] lg:h-[256px] absolute right-0 top-[50%] translate-y-[-50%] z-10">
+                        <img src="img/s3/s3-flower-elpis.png" alt="Gulshan Empire" class="w-auto h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 Is Starting From Here   -->
+        <section id="amenities"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative border-b border-[#EAC4B8]">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col gap-4 sm:gap-5 md:gap-6 container">
+                <!-- Top Amenities Galery Container  -->
+                <div class="flex flex-col gap-3">
+                    <!-- First Row   -->
+                    <div class="flex flex-col lg:flex-row justify-between gap-3">
+                        <!-- Left Side Content Container  -->
+                        <div class="flex flex-col justify-between gap-3 w-full lg:w-auto">
+                            <!-- Row 1  -->
+                            <div class="flex flex-col-reverse  sm:flex-row gap-3 justify-between">
+                                <!-- Left Side Content Container  -->
+                                <div class="relative cursor-pointer overflow-hidden w-full ">
+                                    <img src="img/s4/Landscaped-Greens.jpg" alt=""
+                                        class="w-full md:w-full lg:w-[415px] h-[200px] sm:h-[220px] md:h-[240px] lg:h-[247px] object-cover">
+                                    <p
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        Landscaped Greens</p>
+                                </div>
+
+                                <!-- Right Side White Content Card  -->
+                                <div
+                                    class="flex flex-col gap-3 text-center justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 w-full sm:w-[48%] lg:w-auto">
+                                    <h5 class="font-[700] text-[28px] sm:text-[32px] md:text-[34px] lg:text-[36px] font-montserrat">
+                                        Amenities</h5>
+                                    <p class="font-[400] text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-montserrat lg:w-[240px]">
+                                        Infrastructure conceived for seamless living</p>
+                                </div>
+                            </div>
+
+                            <!-- Row 2  -->
+                            <div class="flex flex-col sm:flex-row gap-3 justify-between">
+                                <!-- Left Side Image Container  -->
+                                <div class="w-full sm:w-[48%] lg:w-[260px] relative cursor-pointer overflow-hidden">
+                                    <img src="img/s4/Kids-Play-Areas.jpg" alt=""
+                                        class="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-auto object-cover">
+                                    <p
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        Kids' Play Areas</p>
+                                </div>
+
+                                <!-- Right Side Image Containe  -->
+                                <div class="w-full sm:w-[48%] lg:w-[451px] relative cursor-pointer overflow-hidden">
+                                    <img src="img/s4/Grand-Entry-Plaza.jpg" alt=""
+                                        class="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-auto object-cover">
+                                    <p
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        Grand Entry Plaza</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side Content Container -->
+                        <div class="flex flex-col gap-3 w-full lg:w-auto">
+                            <!-- Row 1  -->
+                            <div class="flex flex-col sm:flex-row gap-3 justify-between">
+                                <div class="w-full sm:w-[48%] lg:w-[245px] relative overflow-hidden cursor-pointer">
+                                    <img src="img/s4/Signature-Clubhouse.jpg" alt=""
+                                        class="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-auto object-cover">
+                                    <p
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        Signature Clubhouse</p>
+                                </div>
+                                <div class="w-full sm:w-[48%] lg:w-[245px] relative overflow-hidden cursor-pointer">
+                                    <img src="img/s4/Swimming-Pool.jpg" alt=""
+                                        class="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-auto object-cover">
+                                    <p
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        Swimming Pool</p>
+                                </div>
+                            </div>
+
+                            <!-- Row 2  -->
+                            <div class="w-full lg:w-[505px] relative cursor-pointer overflow-hidden">
+                                <img src="img/s4/Fitness-Zones.jpg" alt=""
+                                    class="w-full h-[200px] sm:h-[220px] md:h-[240px] lg:h-auto object-cover">
+                                <p
+                                    class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                    Fitness Zones</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Row  -->
+                    <div class="flex flex-col sm:flex-row justify-between gap-3 w-full">
+                        <!-- Left Side Image container   -->
+                        <div
+                            class="w-full sm:w-[48%] lg:w-[613px] flex-shrink-0 relative overflow-hidden cursor-pointer">
+                            <img src="img/s4/Restaurant.jpg" alt="" class="w-full h-[180px] sm:h-[185px] object-cover">
+                            <p
+                                class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                Restaurant</p>
+                        </div>
+
+                        <!-- Right Side Content Container   -->
+                        <div
+                            class="w-full sm:w-[48%] lg:w-[613px] flex-shrink-0 relative overflow-hidden cursor-pointer">
+                            <img src="img/s4/Gaming-Lounge.jpg" alt=""
+                                class="w-full h-[180px] sm:h-[185px] object-cover">
+                            <p
+                                class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                Gaming Lounge</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Content Container   -->
+                <div class="flex flex-col justify-center items-center text-center w-full gap-4 sm:gap-5 px-4 sm:px-0">
+                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans"> Structured to support recreation,
+                        wellness, and everyday
+                        convenience.</p>
+                    <button
+                        class="w-full sm:w-[180px] md:w-[200px] lg:w-[243px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px]">
+                        <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans">
+                            View more Amenities
+
+                        </p>
+                        <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
+                            class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 Is Starting From Here    -->
+        <section id="floor-plan"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                <!-- Top Content Container  -->
+                <div class="flex flex-col justify-center items-center text-center w-full px-4 sm:px-0">
+                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">Floor
+                        Plan</h3>
+                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black font-montserrat">
+                        Configurations Planned for Scale and Comfort</p>
+                </div>
+
+                <!-- Bottom Content Container   -->
+                <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 justify-center items-center w-full px-4 sm:px-0">
+                    <!-- Top Cards Container  -->
+                    <div class="flex flex-col lg:flex-row justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-4 w-full">
+                        <!-- Left Side Content Container  -->
+                        <div class="flex flex-col gap-3 sm:gap-4 justify-center items-center w-full lg:w-auto">
+                            <div
+                                class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[397px] w-full sm:w-[90%] md:w-[80%] lg:w-[609px] flex justify-center py-6 sm:py-8 md:py-10 items-center border border-[#EAC4B8]">
+                                <img src="img/s5/image 977.png" alt=""
+                                    class="w-[180px] sm:w-[220px] md:w-[250px] lg:w-[282px] h-auto">
+                            </div>
+                            <p class="font-[600] font-open-sans text-[16px] sm:text-[17px] md:text-[18px]">3 BHK Residences</p>
+                        </div>
+
+                        <!-- Right Side Content Container  -->
+                        <div class="flex flex-col gap-3 sm:gap-4 justify-center items-center w-full lg:w-auto">
+                            <div
+                                class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[397px] w-full sm:w-[90%] md:w-[80%] lg:w-[609px] flex justify-center py-6 sm:py-8 md:py-10 items-center border border-[#EAC4B8]">
+                                <img src="img/s5/image 978.png" alt=""
+                                    class="w-[180px] sm:w-[220px] md:w-[250px] lg:w-[282px] h-auto">
+                            </div>
+                            <p class="font-[600] font-open-sans text-[16px] sm:text-[17px] md:text-[18px]">4 BHK Residences</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Button Container  -->
+                    <div class="flex justify-center items-center w-full px-4 sm:px-0">
+                        <button
+                            class="w-full sm:w-[280px] md:w-[310px] lg:w-[340px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px]">
+                            <p class="font-[600] text-[13px] sm:text-[14px] text-white text-center">
+                                Download Floor Plans + Price Sheet
+                            </p>
+                            <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
+                                class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 6 Is Starting From Here    -->
+        <section id="location"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative bg-[#FFF8F6]">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 container">
+                <!-- Top Content Container  -->
+                <div class="flex flex-col justify-center items-center text-center w-full  px-4 sm:px-0">
+                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">Location
+                        Advantage</h3>
+                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black font-montserrat">
+                        Strategically Located Within Wave City</p>
+                </div>
+
+
+                <!-- Bottom Content Container  -->
+                <div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-4">
+
+                    <!-- Left Side Container  -->
+                    <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-8 lg:gap-12 w-full lg:w-auto">
+                        <!-- Inner Left Side Container   -->
+                        <div class="flex flex-col gap-3 sm:gap-4 w-full md:w-auto">
+                            <!-- Card 1  -->
+                            <div
+                                class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
+                                <img src="img/s6/Township-Advantage.png" alt=""
+                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Township Advantage</p>
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Positioned inside an
+                                    integrated master-planned
+                                    ecosystem
+                                </p>
+                            </div>
+
+                            <!-- Card 2  -->
+                            <div
+                                class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
+                                <img src="img/s6/Social-Infrastructure 1.png" alt=""
+                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Social Infrastructure
+                                </p>
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Schools, hospitals, and
+                                    essentials nearby
+                                </p>
+                            </div>
+
+
+                            <!-- Card 3  -->
+                            <div
+                                class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
+                                <img src="img/s6/Urban-Accessibility 1.png" alt=""
+                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Urban Accessibility</p>
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">City connectivity is
+                                    balanced with open surroundings
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <!-- Inner Right Side Container  -->
+                        <div class="flex flex-col gap-3 sm:gap-4 w-full md:w-auto">
+                            <!-- Card 1  -->
+                            <div
+                                class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
+                                <img src="img/s6/Regional-Connectivity 1.png" alt=""
+                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Regional Connectivity
+                                </p>
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Access to NH-24, Noida,
+                                    and Delhi corridors
+                                </p>
+                            </div>
+
+                            <!-- Card 2  -->
+                            <div
+                                class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
+                                <img src="img/s6/Investment-Growth-Zone 1.png" alt=""
+                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Investment Growth Zone
+                                </p>
+                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans">Located within a
+                                    high-development corridor
+                                </p>
+                            </div>
+
+
+                            <!-- Card 3  -->
+                            <div
+                                class="w-full md:w-[240px] lg:w-[277px] h-full flex justify-center md:justify-end items-end">
+                                <button
+                                    class="w-full md:w-[240px] lg:w-[277px] bg-[#DE8063] text-white gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-[2px] flex justify-between items-center rounded-[2px]">
+                                    <p
+                                        class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] text-white text-start font-open-sans">
+                                        Explore Location <br>
+                                        Highlights Nearby
+                                    </p>
+                                    <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
+                                        class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Container   -->
+                    <div class="w-full lg:w-[562px] relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-auto">
+                        <img src="img/s6/Group 195.jpg" alt="" class="w-full h-full ">
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 Is Starting From Here    -->
+        <section id="why-us"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-9 lg:gap-10 container">
+                
+                <!-- Mobile Layout (2 Column Grid) - Visible before md -->
+                <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:hidden">
+                         <!-- Card 8 - Row 4, Col 2 (Center Content) -->
+                         <div
+                         class="h-[160px] flex flex-col justify-center items-center text-center py-3">
+                         <h4 class="font-[700] text-[20px] font-montserrat">Why Invest
+                             with Gulshan</h4>
+                         <p
+                             class="font-[400] text-[14px] max-w-full px-2 font-montserrat">
+                             At Gulshan, architecture is not a backdrop.
+                             It is a presence</p>
+                     </div>
+                    <!-- Card 1 - Row 1, Col 1 -->
+                    <div
+                        class="h-[160px] bg-black flex justify-center items-center text-center py-3 relative">
+                        <p
+                            class="font-[600] text-[14px] text-white px-2 font-open-sans">
+                            Multiple landmark residential projects
+                            delivered</p>
+
+                        <!-- Absolute Position Image Container  -->
+                        <div
+                            class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <img src="img/icns/elips2.png" alt=""
+                                class="w-[120px] h-[120px] object-contain">
+                        </div>
+                    </div>
+
+                    
+                    <!-- Card 2 - Row 1, Col 2 -->
+                    <div
+                        class="h-[160px] bg-black flex justify-center items-center text-center py-3 relative">
+                        <p
+                            class="font-[600] text-[14px] text-white px-2 font-open-sans">
+                            Built for end-use and asset appreciation</p>
+
+                        <!-- Absolute Position Image Container  -->
+                        <div
+                            class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <img src="img/icns/elips2.png" alt=""
+                                class="w-[120px] h-[120px] object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Card 3 - Row 2, Col 1 -->
+                    <div
+                        class="h-[160px] flex flex-col justify-center items-center text-center py-3 relative">
+                        <p class="font-[700] text-[32px] text-black font-montserrat">
+                            30+</p>
+                        <p class="font-[400] text-[14px] max-w-[80%] text-center font-open-sans">
+                            Years of development presence</p>
+                    </div>
+
+                    <!-- Card 4 - Row 2, Col 2 -->
+                    <div
+                        class="h-[160px] bg-[#DE8063] flex justify-center items-center text-center py-3 relative">
+                        <p
+                            class="font-[600] text-[14px] text-center text-white max-w-[65%] px-2 font-open-sans">
+                            Construction-led execution model
+                        </p>
+
+                        <!-- Absolute Position Image Container  -->
+                        <div
+                            class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <img src="img/icns/elips3.png" alt=""
+                                class="w-[120px] h-[120px] object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Card 5 - Row 3, Col 1 -->
+                    <div
+                        class="h-[160px]">
+                        <img src="img/s7/img1-s7.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                       <!-- Card 7 - Row 4, Col 1 -->
+                       <div
+                       class="h-[160px] flex flex-col justify-center items-center text-center py-3 relative">
+                       <p class="font-[700] text-[32px] text-black font-montserrat">
+                           7500+</p>
+                       <p class="font-[400] text-[14px] max-w-[80%] text-center font-open-sans">
+                           Trusted by Families</p>
+                   </div>
+
+
+                    <!-- Card 6 - Row 3, Col 2 -->
+                    <div
+                        class="h-[160px] bg-[#DE8063] flex justify-center items-center text-center py-3 relative">
+                        <p
+                            class="font-[600] text-[14px] text-center text-white max-w-[55%] px-2 font-open-sans">
+                            Planned community developments</p>
+
+                        <!-- Absolute Position Image Container  -->
+                        <div
+                            class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <img src="img/icns/elips3.png" alt=""
+                                class="w-[120px] h-[120px] object-contain">
+                        </div>
+                    </div>
+
+                     <!-- Card 6 - Row 3, Col 2 -->
+                     <div
+                     class="h-[160px] hidden md:flex bg-[#DE8063] justify-center items-center text-center py-3 relative">
+                     <p
+                         class="font-[600] text-[14px] text-center text-white max-w-[55%] px-2 font-open-sans">
+                         Planned community developments</p>
+
+                     <!-- Absolute Position Image Container  -->
+                     <div
+                         class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                         <img src="img/icns/elips3.png" alt=""
+                             class="w-[120px] h-[120px] object-contain">
+                     </div>
+                 </div>
+
+               
+                </div>
+
+                <!-- Desktop Layout - Hidden before md -->
+                <!-- Top Content Container  -->
+                <div class="hidden lg:flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-0">
+                    <!-- Row 1  -->
+                    <div class="flex flex-col md:flex-row justify-between gap-3 sm:gap-4 md:gap-2">
+                        <!-- Card 1  -->
+                        <div
+                            class="w-full md:w-[48%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-black flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
+                            <p
+                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-white px-2 font-open-sans">
+                                Multiple landmark residential projects
+                                delivered</p>
+
+                            <!-- Absolute Position Image Container  -->
+                            <div
+                                class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <img src="img/icns/elips2.png" alt=""
+                                    class="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[163px] h-[120px] sm:h-[140px] md:h-[150px] lg:h-[163px] object-contain">
+                            </div>
+                        </div>
+
+                        <!-- Card 2 Content Container  -->
+                        <div
+                            class="h-auto md:h-full flex flex-col justify-center items-center text-center py-4 md:py-0 w-full md:w-auto">
+                            <h4 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">Why Invest
+                                with Gulshan</h4>
+                            <p
+                                class="font-[400] text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] max-w-full md:max-w-[458px] px-4 md:px-0 font-montserrat">
+                                At Gulshan, architecture is not a backdrop.
+                                It is a presence</p>
+                        </div>
+
+
+                        <!-- Card 3  -->
+                        <div
+                            class="w-full md:w-[48%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-black flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
+                            <p
+                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-white px-10 font-open-sans">
+                                Built for end-use and asset appreciation</p>
+
+                            <!-- Absolute Position Image Container  -->
+                            <div
+                                class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <img src="img/icns/elips2.png" alt=""
+                                    class="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[163px] h-[120px] sm:h-[140px] md:h-[150px] lg:h-[163px] object-contain">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap justify-between gap-3 sm:gap-4 md:gap-2">
+                        <!-- Card 1  -->
+                        <div
+                            class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat">
+                                30+</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center font-open-sans">
+                                Years of development presence</p>
+                        </div>
+                        <!-- Card 2  -->
+                        <div
+                            class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-[#DE8063] flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
+                            <p
+                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center text-white max-w-[65%] px-2 font-open-sans">
+                                Construction-led execution model
+                            </p>
+
+                            <!-- Absolute Position Image Container  -->
+                            <div
+                                class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <img src="img/icns/elips3.png" alt=""
+                                    class="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[163px] h-[120px] sm:h-[140px] md:h-[150px] lg:h-[163px] object-contain">
+                            </div>
+                        </div>
+                        <!-- Card 3  -->
+                        <div
+                            class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px]">
+                            <img src="img/s7/img1-s7.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Card 4  -->
+                        <div
+                            class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-[#DE8063] flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
+                            <p
+                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center text-white max-w-[55%] px-2 font-open-sans">
+                                Planned community developments</p>
+
+                            <!-- Absolute Position Image Container  -->
+                            <div
+                                class="absolute w-full h-full flex justify-center items-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <img src="img/icns/elips3.png" alt=""
+                                    class="w-[120px] sm:w-[140px] md:w-[150px] lg:w-[163px] h-[120px] sm:h-[140px] md:h-[150px] lg:h-[163px] object-contain">
+                            </div>
+                        </div>
+                        <!-- Card 5  -->
+                        <div
+                            class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat">
+                                7500+</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center font-open-sans">
+                                Trusted by Families</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Bottom Button Container   -->
+                <div class="flex justify-center items-center px-4 sm:px-0">
+                    <button
+                        class="w-full sm:w-[180px] md:w-[190px] lg:w-[203px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px]">
+                        <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans">
+                            Book a Site Visit
+
+                        </p>
+                        <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
+                            class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8 Is Starting From Here     -->
+        <section id="gulshan-group"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 pb-8 sm:pb-12 md:pb-16 lg:pb-[70px] relative">
+            <!-- Centered Align Container  -->
+            <div class="w-full flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-4 container">
+                <!-- Left Side Image Container  -->
+                <div class="w-full sm:w-[280px] md:w-[300px] lg:w-[307px] flex justify-center lg:justify-start">
+                    <img src="img/s9/s8-logo.png" alt="Image 1" class="w-full max-w-[307px] h-auto object-cover">
+                </div>
+
+                <!-- Right Side Content Container  -->
+                <div
+                    class="border border-[#F5E9E5] flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 py-8 sm:py-12 md:py-16 lg:py-[70px] px-4 sm:px-6 md:px-12 lg:px-20 text-center w-full lg:w-auto">
+                    <p class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">About Developer</p>
+                    <p
+                        class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-full lg:max-w-[700px] px-2 sm:px-0 font-open-sans">
+                        Established in 1989, <span class="font-[700]">Gulshan</span>
+                        Group has blossomed into a prominent player in India's real estate landscape, redefining
+                        standards with accolades for design and quality. We imbue each venture with a touch of our
+                        essence, exemplifying the splendor of our passion.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 9 Is Starting From Here     -->
+        <section id="contact"
+            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] relative bg-[#FFEEE9] overflow-hidden">
+            <!-- Centered Align Container  -->
+            <div class="w-full relative flex flex-col justify-between gap-6 sm:gap-7 md:gap-8 container">
+
+                <!-- Absolute Position Lady Image  -->
+                <div class="hidden md:block absolute -bottom-[40px] md:-bottom-[50px] lg:-bottom-[70px] right-0 z-0">
+                    <img src="img/s8/lady-img.png" alt="Lady Image"
+                        class="w-[200px] md:w-[250px] lg:w-[315px] h-auto object-contain">
+                </div>
+
+                <!-- Top Row  -->
+                <div class="z-10 flex flex-col gap-3 sm:gap-4 text-center md:text-start">
+                    <h6 class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px]">"Make the Right
+                        <span class="font-[700]">Gulshan Empire <br>
+                            Investment!</span> with Our Experts"</h6>
+                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px]">Secure Your Residence at Gulshan
+                        Empire</p>
+                </div>
+                <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-4 z-10">
+                    <!-- WhatsApp And Mail Container  -->
+                    <div class="flex hidden flex-col sm:flex-row gap-3 sm:gap-4">
+                        <div class="flex gap-2 items-center">
+                            <img src="img/icns/whatsapp.png" alt="WhatsApp Icon"
+                                class="w-[30px] sm:w-[32px] md:w-[35px] h-auto object-contain">
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px]">WhatsApp</p>
+                        </div>
+
+
+                        <div class="flex gap-2 items-center">
+                            <div
+                                class="w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] md:w-[35px] md:h-[35px] rounded-full bg-white flex justify-center items-center">
+                                <img src="img/icns/mail.svg" alt="Mail Icon"
+                                    class="w-[14px] sm:w-[15px] md:w-[16px] h-auto object-contain">
+                            </div>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] break-all sm:break-normal">
+                                contact@gulshanempire.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Form Container  -->
+                    <div class="flex flex-col gap-3 w-full lg:w-[85%] z-10">
+                        <form
+                            class="bg-[#FFFFFFF5] flex flex-col gap-4 sm:gap-5 md:gap-6 rounded-[5px] py-8 sm:py-10 md:py-10 px-4 sm:px-5 md:px-6">
+                            <!-- Row 1  -->
+                            <div
+                                class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-3 w-full lg:w-[780px] justify-between">
+                                <input type="text" name="name"
+                                    class="flex-1 sm:flex-none sm:w-[48%] md:w-[240px] lg:w-[246px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3"
+                                    placeholder="Name">
+
+                                <input type="tel" name="phone"
+                                    class="flex-1 sm:flex-none sm:w-[48%] md:w-[240px] lg:w-[246px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3"
+                                    placeholder="Phone">
+
+                                <input type="email" name="email"
+                                    class="flex-1 sm:flex-none sm:w-[48%] md:w-[240px] lg:w-[246px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3"
+                                    placeholder="Email">
+                            </div>
+
+                            <!-- Row 2  -->
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full lg:w-auto">
+                                <input type="text" name="message"
+                                    class="flex-1 lg:w-[780px] border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 resize-none"
+                                    placeholder="Message">
+
+                                <button type="submit"
+                                    class="w-full sm:w-[180px] md:w-[200px] lg:w-[215px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] cursor-pointer self-start sm:self-auto">
+                                    <p class="font-[600] text-[13px] sm:text-[14px] text-white">
+                                        Get Consultation
+                                    </p>
+                                    <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
+                                        class="w-[18px] sm:w-[19px] md:w-[20px] h-auto object-contain">
+                                </button>
+                            </div>
+                        </form>
+                        <p class="font-[400] text-[12px] sm:text-[13px] md:text-[14px] text-center md:text-start">Your information remains private
+                            and protected</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer
+        class="w-full flex justify-center items-center bg-black px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px]">
+        <!-- Centered Align Container  -->
+        <div class="w-full flex justify-center items-center flex-col gap-6 sm:gap-8 md:gap-9 lg:gap-12">
+            <!-- Top Content Container  -->
+            <div class="w-full sm:w-[280px] md:w-[300px] lg:w-[333px] flex justify-center">
+                <img src="img/footer/bottom-logo.png" alt="Bottom Logo"
+                    class="w-full max-w-[333px] h-[120px] sm:h-[140px] md:h-[150px] lg:h-[164px] object-contain">
+            </div>
+            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white text-center px-4 sm:px-0">
+                © Copyright 2026 Gulshan Empire. All Right Reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

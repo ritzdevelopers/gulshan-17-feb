@@ -1,0 +1,22 @@
+/* Google Fonts */
+/* Montserrat for all heading tags */
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Open Sans for paragraphs, anchors, and lists */
+.font-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Default font for body */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 1370px) {
+    .container {
+        width: 1230px !important;
+        margin: 0 auto;
+    }
+}
