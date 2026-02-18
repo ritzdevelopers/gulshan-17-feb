@@ -1,17 +1,19 @@
 /* Google Fonts */
 /* Montserrat for all heading tags */
-.font-montserrat {
-    font-family: 'Montserrat', sans-serif;
+
+/* Lora font class */
+.fontLora {
+    font-family: 'Lora', serif;
 }
 
-/* Open Sans for paragraphs, anchors, and lists */
-.font-open-sans {
-    font-family: 'Open Sans', sans-serif;
+/* Avenir for paragraphs */
+.fontAvenir {
+    font-family: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Default font for body */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Prevent horizontal scroll on mobile */
@@ -43,19 +45,10 @@ html, body {
 
 /* 1024px devices (iPad Pro, small laptops) */
 @media (min-width: 1024px) and (max-width: 1080px) {
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
+  
 
     /* Prevent content sticking to edges */
-    main > section {
-        padding-left: 3rem !important;
-        padding-right: 3rem !important;
-    }
-
+  
     #home h1 { font-size: 56px !important; line-height: 1.1; }
     #home p { max-width: 380px; }
 
@@ -100,8 +93,6 @@ html, body {
         max-width: 984px;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 }
 
@@ -306,3 +297,4 @@ footer {
     background-repeat: repeat;
     background-color: #000;
 }
+

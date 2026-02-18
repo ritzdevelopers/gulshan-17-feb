@@ -11,12 +11,40 @@
     <title>Gulshan Empire - Wave City</title>
     <link rel="icon" href="img/icns/favicon-gulshan.png" type="image/png">
 
-    <!-- Google Fonts - Montserrat and Open Sans -->
+    <!-- Google Fonts - Montserrat, Open Sans, and Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@100;200;300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    
+    <!-- Avenir Font - Using system font stack (Avenir available on macOS/iOS) -->
+    <style>
+        @font-face {
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Avenir'), local('Avenir-Regular');
+        }
+        @font-face {
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Avenir Medium'), local('Avenir-Medium');
+        }
+        @font-face {
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 600;
+            src: local('Avenir Heavy'), local('Avenir-Heavy');
+        }
+        @font-face {
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Avenir Black'), local('Avenir-Black');
+        }
+    </style>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,6 +55,8 @@
                     fontFamily: {
                         'montserrat': ['Montserrat', 'sans-serif'],
                         'open-sans': ['Open Sans', 'sans-serif'],
+                        'avenir': ['Avenir', 'Avenir Next', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'lora': ['Lora', 'serif'],
                     }
                 }
             }
@@ -59,28 +89,28 @@
             <!-- Desktop Navigation Container  -->
             <div class="nav-links hidden lg:flex items-center gap-8 pt-[10px]">
                 <a href="#home"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
                 <a href="#overview"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Overview</a>
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Overview</a>
                 <a href="#highlights"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Highlights</a>
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Highlights</a>
                 <a href="#amenities"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Amenities</a>
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Amenities</a>
                 <a href="#floor-plan"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Floor
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Floor
                     plans</a>
                 <a href="#location"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Location</a>
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Location</a>
                 <a href="#why-us"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Why
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Why
                     us</a>
                 <a href="#gulshan-group"
-                    class="nav-link font-[500] text-[14px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Gulshan
+                    class="nav-link font-[500] text-[14px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Gulshan
                     Group</a>
 
                 <a href="#contact"
-                    class="nav-link btn-fill-hover font-[500] text-[14px] cursor-pointer px-6 py-2 bg-[#DE8063] text-white rounded-[2px] flex justify-center items-center h-[40px] transition-colors">
-                    <p class="text-white">Contact</p>
+                    class="nav-link btn-fill-hover font-[500] text-[14px]   cursor-pointer px-6 py-2 bg-[#DE8063] text-white rounded-[2px] flex justify-center items-center h-[40px] transition-colors">
+                    <p class="fontLora text-white">Contact</p>
                 </a>
             </div>
 
@@ -96,27 +126,27 @@
         <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-black z-40 transform -translate-y-full">
             <div class="flex flex-col items-center justify-center h-full gap-[1.5rem] px-8">
                 <a href="#home"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Home</a>
                 <a href="#overview"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Overview</a>
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Overview</a>
                 <a href="#highlights"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Highlights</a>
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Highlights</a>
                 <a href="#amenities"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Amenities</a>
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Amenities</a>
                 <a href="#floor-plan"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Floor
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Floor
                     plan</a>
                 <a href="#location"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Location</a>
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Location</a>
                 <a href="#why-us"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Why
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Why
                     us</a>
                 <a href="#gulshan-group"
-                    class="mobile-nav-link font-[500] text-[20px] text-white cursor-pointer hover:text-[#DE8063] transition-colors">Gulshan
+                    class="mobile-nav-link font-[500] text-[20px] fontAvenir text-white cursor-pointer hover:text-[#DE8063] transition-colors">Gulshan
                     Group</a>
 
                 <a href="#contact"
-                    class="btn-fill-hover font-[500] text-[14px] cursor-pointer px-8 py-3 bg-[#DE8063] text-white rounded-[2px] flex justify-center items-center transition-colors">
+                    class="btn-fill-hover font-[500] text-[14px] fontLora cursor-pointer px-8 py-3 bg-[#DE8063] text-white rounded-[2px] flex justify-center items-center transition-colors">
                     <p class="text-white">Contact</p>
                 </a>
             </div>
@@ -137,7 +167,7 @@
 
         <!-- Object 3 - Enquire Now Button -->
         <button id="enquire-now-btn" type="button" class="open-enquiry-modal btn-fill-hover fixed z-20 right-[-60px] top-[65%] sm:top-[62%] translate-y-[-50%] w-[152px] h-[46px] bg-[#DE8063] text-white flex justify-center items-center cursor-pointer rotate-90 transition-colors">
-            <p class="font-[600] text-[17px] text-white">
+            <p class="font-[600] text-[17px] fontLora text-white fontLora">
                 Enquire Now
             </p>
         </button>
@@ -152,10 +182,10 @@
                 <div class="flex flex-col gap-10 sm:gap-10 md:gap-12 w-full max-w-full lg:hidden items-center justify-end pb-[0.5rem] sm:pb-8">
                     <div class="flex flex-col gap-5 sm:gap-6 text-center w-full items-center mb-[-20px]">
                         <h1
-                            class="font-[500] text-[32px] sm:text-[48px] md:text-[60px] text-white leading-[1.1] font-montserrat">
+                            class="font-[500] text-[32px] sm:text-[48px] md:text-[60px] text-white leading-[1.1] fontLora">
                             LIVE YOUR <br>
                             LEGACY</h1>
-                        <p class="font-[400] text-[12px] sm:text-[13px] md:text-[14px] text-white leading-[1.65] w-full max-w-[300px] sm:max-w-[320px] md:max-w-[350px] font-open-sans">
+                        <p class="font-[400] text-[12px] sm:text-[13px] md:text-[14px] text-white leading-[1.65] w-full max-w-[300px] sm:max-w-[320px] md:max-w-[350px]">
                             Commanding 3 & 4 bedroom homes at<br class="sm:hidden">
                             Wave City, defined by expansive<br class="sm:hidden">
                             layouts, abundant light, and<br class="sm:hidden">
@@ -170,12 +200,12 @@
                             <div class="flex items-center gap-2 justify-center">
                                 <img src="img/icns/location.svg" alt="Location Icon"
                                     class="w-[14px] sm:w-[16px] md:w-[18px] h-auto object-contain icon-orange flex-shrink-0">
-                                <p class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] text-[#DE8063] font-montserrat">
+                                <p class="font-[600] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-[#DE8063] fontLora">
                                     Wave City, Ghaziabad
                                 </p>
                             </div>
                             <div class="border-t border-b border-[#DE8063] w-full py-3.5 sm:py-3 px-4 sm:px-0 leading-[1.9]">
-                                <p class="font-[400] text-[13px] sm:text-[14px] md:text-[16px] text-white font-montserrat text-center leading-[1.9]">
+                                <p class="font-[400] fontAvenir  text-[13px] sm:text-[14px] md:text-[16px] text-white fontLora text-center leading-[1.9]">
                                     <span>Configurations: <span class="font-[700]">3 BHK | 4 BHK</span></span><br class="sm:hidden"><span class="sm:inline hidden">, </span><span>Development Size: <span class="font-[700]">5.5 Acres</span></span>
                                 </p>
                             </div>
@@ -187,10 +217,10 @@
                 <div class="hidden lg:flex flex-col justify-between gap-4 sm:gap-6 md:gap-8 w-full">
                     <div class="flex flex-col gap-2">
                         <h1
-                            class="font-[500] text-[72px] xl:text-[80px] text-white leading-[1.1] font-montserrat">
+                            class="font-[500] text-[72px] xl:text-[80px] text-white leading-[1.1] fontLora">
                             LIVE YOUR <br>
                             LEGACY <span
-                                class="font-[400] text-[15px] text-white inline-block leading-[1.5] w-full max-w-[350px] mt-2 font-open-sans">
+                                class="font-[400] hidden text-[15px] hidden text-white inline-block leading-[1.5] w-full max-w-[350px] mt-2">
                                 Commanding 3 & 4 bedroom homes at Wave City, defined by expansive layouts, abundant
                                 light, and seamless transitions.
                             </span></h1>
@@ -203,12 +233,12 @@
                             <div class="flex items-center gap-2">
                                 <img src="img/icns/location.svg" alt="Location Icon"
                                     class="w-[18px] h-auto object-contain icon-orange">
-                                <p class="font-[600] text-[16px] text-[#DE8063] font-montserrat">
+                                <p class="font-[600] fontAvenir text-[16px] text-[#DE8063] fontLora">
                                     Wave City, Ghaziabad
                                 </p>
                             </div>
                             <div class="border-t border-b py-3 border-[#DE8063]">
-                                <p class="font-[400] text-[16px] text-white font-montserrat">
+                                <p class="font-[400] fontAvenir text-[16px] text-white fontLora">
                                     Configurations: <span class="font-[700]">3 BHK | 4 BHK</span>, Development Size:
                                     <span class="font-[700]">5.5 Acres</span>
                                 </p>
@@ -219,9 +249,9 @@
             </div>
 
             <!-- Hero Slider - Mobile -->
-            <div class="hero-slider-mobile absolute -left-4 -top-2 w-[calc(100%+2rem)] sm:-left-6 sm:w-[calc(100%+3rem)] md:hidden h-full z-0 overflow-hidden">
+            <div class="hero-slider-mobile absolute -left-4  w-[calc(100%+2rem)] sm:-left-6 sm:w-[calc(100%+3rem)] md:hidden h-full z-0 overflow-hidden">
                 <div class="hero-slide active" data-slide="0">
-                    <img src="img/s1/mobile-b1.jpeg" alt="Hero 1" class="w-full h-full object-cover object-center">
+                    <img src="img/nimg/nbanner-phone.jpg" alt="Hero 1" class="w-full h-full object-cover object-center">
                 </div>
                 <div class="hero-slide" data-slide="1">
                     <img src="img/s1/mobile_b2.jpeg" alt="Hero 2" class="w-full h-full object-cover object-center">
@@ -231,9 +261,9 @@
                 </div>
             </div>
             <!-- Hero Slider - Desktop -->
-            <div class="hero-slider-desktop absolute left-0 -top-2 w-full h-full z-0 overflow-hidden hidden md:block">
+            <div class="hero-slider-desktop absolute left-0  w-full h-full z-0 overflow-hidden hidden md:block">
                 <div class="hero-slide active" data-slide="0">
-                    <img src="img/s1/desktop-b1.jpeg" alt="Hero 1" class="w-full h-full object-cover object-center">
+                    <img src="img/nimg/nbanner-desk.jpg" alt="Hero 1" class="w-full h-full object-cover object-center">
                 </div>
                 <div class="hero-slide" data-slide="1">
                     <img src="img/s1/desktop_b2.jpeg" alt="Hero 2" class="w-full h-full object-cover object-center">
@@ -253,35 +283,35 @@
 
         <!-- Section 2 Is Starting From Here  -->
         <section id="overview"
-            class="w-full flex justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-[70px] border-b border-[#EAC4B8] relative">
+            class="w-full flex justify-center items-center px-4  xl:px-16 py-8 sm:py-12 xl:py-[70px] border-b border-[#EAC4B8] relative">
             <!-- Centered Align Container  -->
-            <div class="w-full flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-0 container">
+            <div class="w-full flex flex-col xl:flex-row justify-center items-center gap-6 lg:gap-0 container">
                 <!-- Left Side Container   -->
-                <div class="flex flex-col justify-between w-full lg:w-auto">
+                <div class="flex xl:flex-col justify-between w-full lg:w-auto">
                     <!-- Top Content  -->
                     <div class="flex flex-col mb-6 lg:mb-0 text-center lg:text-start">
-                        <p class="font-[600] text-[11px] sm:text-[12px] md:text-[13px] uppercase text-[#A27140] font-open-sans">
+                        <p class="font-[600] fontAvenir text-[11px] sm:text-[12px] md:text-[13px] uppercase text-[#A27140]">
                             Overview</p>
                         <h2
-                            class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] w-full lg:w-[258px] font-montserrat leading-[1.25] sm:leading-[50px]">
+                            class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] w-full lg:w-[258px] fontLora leading-[1.25] sm:leading-[50px]">
                             The Gulshan Standard of Living</h2>
                     </div>
                     <!-- Bottom Content Container  -->
-                    <div class="flex flex-col w-full lg:w-auto">
+                    <div class="flex xl:flex-col w-full lg:w-auto">
                         <div
                             class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat" data-counter data-to="4" data-duration="1500">0</p>
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">Towers</p>
+                            <p class="font-[700] text-[32px] fontAvenir sm:text-[36px] md:text-[40px] fontLora" data-counter data-to="4" data-duration="1500">0</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] fontAvenir">Towers</p>
                         </div>
                         <div
                             class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat" data-counter data-to="31" data-prefix="G+" data-duration="1500">G+0</p>
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">Floors</p>
+                            <p class="font-[700] text-[32px] fontAvenir sm:text-[36px] md:text-[40px] fontLora" data-counter data-to="31" data-prefix="G+" data-duration="1500">G+0</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] fontAvenir">Floors</p>
                         </div>
                         <div
                             class="w-full lg:w-[208px] border-b border-[#EAC4B8] flex flex-col justify-center items-center py-4 sm:py-5 lg:py-6">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[40px] font-montserrat" data-counter data-to="4" data-prefix="3 & " data-duration="1500">3 & 0</p>
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-montserrat">BHK Apartments</p>
+                            <p class="font-[700] text-[32px] fontAvenir sm:text-[36px] md:text-[40px] fontLora" data-counter data-to="4" data-prefix="3 & " data-duration="1500">3 & 0</p>
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] fontAvenir">BHK Apartments</p>
                         </div>
                     </div>
                 </div>
@@ -302,7 +332,7 @@
                                     <div class="flex gap-2">
                                         <img src="img/icns/tick.svg" alt="Tick Icon"
                                             class="w-[18px] sm:w-[20px] md:w-[23px] h-auto object-contain flex-shrink-0">
-                                        <p class="font-[500] sm:font-[600] text-[15px] sm:text-[17px] md:text-[17px] text-white font-montserrat">
+                                        <p class="font-[500] sm:font-[600] text-[15px] sm:text-[17px] md:text-[17px] text-white fontLora">
                                             Premium township positioning</p>
                                     </div>
 
@@ -311,7 +341,7 @@
                                     <div class="flex gap-2">
                                         <img src="img/icns/tick.svg" alt="Tick Icon"
                                             class="w-[18px] sm:w-[20px] md:w-[23px] h-auto object-contain flex-shrink-0">
-                                        <p class="font-[500] sm:font-[600] text-[15px] sm:text-[17px] md:text-[17px] text-white font-montserrat">
+                                        <p class="font-[500] sm:font-[600] text-[15px] sm:text-[17px] md:text-[17px] text-white fontLora">
                                             Expansive 3 & 4 BHK homes</p>
                                     </div>
                                 </li>
@@ -319,7 +349,7 @@
                                     <div class="flex gap-2">
                                         <img src="img/icns/tick.svg" alt="Tick Icon"
                                             class="w-[18px] sm:w-[20px] md:w-[23px] h-auto object-contain flex-shrink-0">
-                                        <p class="font-[500] sm:font-[600] text-[15px] sm:text-[17px] md:text-[17px] text-white font-montserrat">
+                                        <p class="font-[500] sm:font-[600] text-[15px] sm:text-[17px] md:text-[17px] text-white fontLora">
                                             High-rise luxury towers</p>
                                     </div>
                                 </li>
@@ -329,7 +359,7 @@
                         <!-- Bottom Content Container   -->
                         <div
                             class="w-full lg:w-[432px] text-center lg:text-start items-center lg:items-start lg:px-10 pt-4 sm:pt-5 md:pt-6 flex flex-col justify-between h-full gap-4">
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black font-open-sans leading-[28px] w-full min-w-0 sm:min-w-[373px] px-6 sm:px-6 lg:px-0">
+                            <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-black leading-[28px] w-full min-w-0 sm:min-w-[373px] px-6 sm:px-6 lg:px-0">
                                 Gulshan Empire rises as a defining residential development within Wave City, spread
                                 across 5.5 acres. Defined by architectural clarity and spatial generosity, each 3 and 4
                                 bedroom residence carries forward a legacy of excellence. Thoughtfully planned
@@ -338,7 +368,7 @@
                             </p>
 
                             <button type="button" class="open-enquiry-modal btn-fill-hover w-full sm:w-[180px] md:w-[203px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] self-center lg:self-start cursor-pointer transition-colors">
-                                <p class="font-[600] text-[14px] text-white font-open-sans">
+                                <p class="font-[600] fontLora text-[14px] text-white">
                                     Book a Site Visit
 
                                 </p>
@@ -359,10 +389,10 @@
             <div class="w-full flex flex-col gap-6 sm:gap-7 md:gap-8 min-w-0 max-w-full">
                 <!-- Top Content Container  -->
                 <div class="w-full flex flex-col justify-center items-center text-center gap-2 px-4 sm:px-6 md:px-8 min-w-0">
-                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">
+                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black fontLora">
                         Key Highlights
                     </h3>
-                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black font-montserrat">A
+                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black fontLora">A
                         Signature Design Language</p>
                 </div>
 
@@ -389,9 +419,9 @@
 
                                 <!-- Right Side Content Container   -->
                                 <div class="flex flex-col gap-1.5">
-                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white font-montserrat">Skyline
+                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white fontLora">Skyline
                                         Presence</p>
-                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">G+31
+                                    <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-white">G+31
                                         towers shaping a powerful
                                         residential skyline</p>
                                 </div>
@@ -408,9 +438,9 @@
 
                                 <!-- Right Side Content Container   -->
                                 <div class="flex flex-col gap-1.5">
-                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white font-montserrat">
+                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white fontLora">
                                         Green-Centric Planning</p>
-                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">Large
+                                    <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-white">Large
                                         landscaped zones anchored by a
                                         car-free core</p>
                                 </div>
@@ -427,9 +457,9 @@
 
                                 <!-- Right Side Content Container   -->
                                 <div class="flex flex-col gap-1.5">
-                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white font-montserrat">Garden
+                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white fontLora">Garden
                                         Residences</p>
-                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">
+                                    <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-white">
                                         Ground-floor homes with private garden access</p>
                                 </div>
                             </div>
@@ -444,9 +474,9 @@
 
                                 <!-- Right Side Content Container   -->
                                 <div class="flex flex-col gap-1.5">
-                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white font-montserrat">Advanced
+                                    <p class="font-[600] text-[16px] sm:text-[17px] md:text-[17px] text-white fontLora">Advanced
                                         Security Grid</p>
-                                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white font-open-sans">Automated
+                                    <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-white">Automated
                                         monitored access</p>
                                 </div>
                             </div>
@@ -474,22 +504,22 @@
                         <!-- Left Side Content Container  -->
                         <div class="flex flex-col justify-between gap-3 w-full lg:w-auto">
                             <!-- Row 1  -->
-                            <div class="flex flex-col-reverse  sm:flex-row gap-3 justify-between">
+                            <div class="flex flex-col-reverse  sm:flex-row gap-3 xl:justify-between">
                                 <!-- Left Side Content Container  -->
                                 <div class="relative overflow-hidden w-full ">
                                     <img src="img/s4/Landscaped-Greens.jpg" alt=""
-                                        class="w-full md:w-full lg:w-[415px] h-[240px] sm:h-[260px] md:h-[280px] lg:h-[247px] object-cover object-center">
+                                        class="w-full md:w-full lg:w-[415px] div1 h-[240px] sm:h-[260px] md:h-[280px] lg:h-[247px] object-cover object-center">
                                     <p
-                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                         Landscaped Greens</p>
                                 </div>
 
                                 <!-- Right Side White Content Card  -->
                                 <div
-                                    class="flex flex-col gap-3 text-center justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 w-full sm:w-[48%] lg:w-auto">
-                                    <h5 class="font-[700] text-[28px] sm:text-[32px] md:text-[34px] lg:text-[36px] font-montserrat">
+                                    class="flex flex-col div1 gap-3 text-center justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 w-full sm:w-[48%] lg:w-auto">
+                                    <h5 class="font-[700] text-[28px] sm:text-[32px] md:text-[34px] lg:text-[36px] fontLora">
                                         Amenities</h5>
-                                    <p class="font-[400] text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-montserrat lg:w-[240px]">
+                                    <p class="font-[400] text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] fontLora lg:w-[240px]">
                                         Executed with craftsmanship</p>
                                 </div>
                             </div>
@@ -497,20 +527,20 @@
                             <!-- Row 2  -->
                             <div class="flex flex-col sm:flex-row gap-3 justify-between">
                                 <!-- Left Side Image Container  -->
-                                <div class="w-full sm:w-[48%] lg:w-[260px] relative  overflow-hidden">
+                                <div class="w-full sm:w-[48%] lg:w-[260px] div3 relative  overflow-hidden">
                                     <img src="img/s4/Kids-Play-Areas.jpg" alt=""
                                         class="w-full h-[220px] sm:h-[240px] md:h-[260px] lg:h-auto object-cover object-center">
                                     <p
-                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                         Kids' Play Area</p>
                                 </div>
 
                                 <!-- Right Side Image Containe  -->
-                                <div class="w-full sm:w-[48%] lg:w-[451px] relative  overflow-hidden">
+                                <div class="w-full sm:w-[48%] lg:w-[451px] relative div2 overflow-hidden">
                                     <img src="img/s4/Grand-Entry-Plaza.jpg" alt=""
                                         class="w-full h-[220px] sm:h-[240px] md:h-[260px] lg:h-auto object-cover object-center">
                                     <p
-                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                         Grand Entry Plaza</p>
                                 </div>
                             </div>
@@ -524,14 +554,14 @@
                                     <img src="img/s4/Signature-Clubhouse.jpg" alt=""
                                         class="w-full h-[380px] sm:h-[420px] md:h-[460px] lg:h-auto object-cover object-center">
                                     <p
-                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                         Signature Clubhouse</p>
                                 </div>
                                 <div class="w-full sm:w-[48%] lg:w-[245px] relative overflow-hidden ">
                                     <img src="img/s4/Swimming-Pool.jpg" alt=""
                                         class="w-full h-[380px] sm:h-[420px] md:h-[460px] lg:h-auto object-cover object-center">
                                     <p
-                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                        class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                         Swimming Pool</p>
                                 </div>
                             </div>
@@ -541,7 +571,7 @@
                                 <img src="img/s4/Fitness-Zones.jpg" alt=""
                                     class="w-full h-[240px] sm:h-[260px] md:h-[280px] lg:h-auto object-cover object-center">
                                 <p
-                                    class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                    class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                     Fitness Zones</p>
                             </div>
                         </div>
@@ -554,7 +584,7 @@
                             class="w-full sm:w-[48%] lg:w-[613px] flex-shrink-0 relative overflow-hidden">
                             <img src="img/s4/Restaurant.jpg" alt="" class="w-full h-[220px] sm:h-[240px] md:h-[260px] object-cover object-center">
                             <p
-                                class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                 Restaurant</p>
                         </div>
 
@@ -564,7 +594,7 @@
                             <img src="img/s4/Gaming-Lounge.jpg" alt=""
                                 class="w-full h-[220px] sm:h-[240px] md:h-[260px] object-cover object-center">
                             <p
-                                class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white font-montserrat">
+                                class="absolute bottom-2 sm:bottom-3 md:bottom-4 w-full text-center left-[50%] translate-x-[-50%] font-[700] text-[14px] sm:text-[15px] md:text-[16px] text-white fontLora">
                                 Gaming Lounge</p>
                         </div>
                     </div>
@@ -572,11 +602,11 @@
 
                 <!-- Bottom Content Container   -->
                 <div class="flex flex-col justify-center items-center text-center w-full gap-4 sm:gap-5 px-4 sm:px-0">
-                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] font-open-sans"> Structured to support recreation,
+                    <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px]"> Structured to support recreation,
                         wellness, and everyday
                         convenience.</p>
                     <button type="button" class="open-enquiry-modal btn-fill-hover w-full sm:w-auto sm:min-w-[180px] md:min-w-[200px] lg:min-w-[243px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] whitespace-nowrap">
-                        <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans whitespace-nowrap">
+                        <p class="font-[600] fontLora text-[13px] sm:text-[14px] text-white whitespace-nowrap">
                             View more Amenities
                         </p>
                         <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
@@ -593,9 +623,9 @@
             <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
                 <!-- Top Content Container  -->
                 <div class="flex flex-col justify-center items-center text-center w-full px-4 sm:px-0">
-                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">Floor
+                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black fontLora">Floor
                         Plans</h3>
-                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black font-montserrat">
+                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black fontLora">
                         Configurations Planned for Scale and Comfort</p>
                 </div>
 
@@ -606,28 +636,28 @@
                         <!-- Left Side Content Container  -->
                         <div class="flex flex-col gap-3 sm:gap-4 justify-center items-center w-full lg:w-auto">
                             <div
-                                class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[397px] w-full sm:w-[90%] md:w-[80%] lg:w-[609px] flex justify-center py-6 sm:py-8 md:py-10 items-center border border-[#EAC4B8]">
+                                class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[397px] w-full px-10 lg:px-0 xl:w-[609px] flex justify-center py-6 sm:py-8 md:py-10 items-center border border-[#EAC4B8]">
                                 <img src="img/s5/image 977.png" alt=""
                                     class="w-[180px] sm:w-[220px] md:w-[250px] lg:w-[282px] h-auto">
                             </div>
-                            <p class="font-[600] font-open-sans text-[16px] sm:text-[17px] md:text-[18px]">3 BHK Residences</p>
+                            <p class="font-[600] fontLora text-[16px] sm:text-[17px] md:text-[18px]">3 BHK Residences</p>
                         </div>
 
                         <!-- Right Side Content Container  -->
                         <div class="flex flex-col gap-3 sm:gap-4 justify-center items-center w-full lg:w-auto">
                             <div
-                                class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[397px] w-full sm:w-[90%] md:w-[80%] lg:w-[609px] flex justify-center py-6 sm:py-8 md:py-10 items-center border border-[#EAC4B8]">
+                                class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[397px] w-full px-10 lg:px-0 xl:w-[609px] flex justify-center py-6 sm:py-8 md:py-10 items-center border border-[#EAC4B8]">
                                 <img src="img/s5/image 978.png" alt=""
                                     class="w-[180px] sm:w-[220px] md:w-[250px] lg:w-[282px] h-auto">
                             </div>
-                            <p class="font-[600] font-open-sans text-[16px] sm:text-[17px] md:text-[18px]">4 BHK Residences</p>
+                            <p class="font-[600] fontLora text-[16px] sm:text-[17px] md:text-[18px]">4 BHK Residences</p>
                         </div>
                     </div>
 
                     <!-- Bottom Button Container  -->
                     <div class="flex justify-center items-center px-4 sm:px-0">
                         <button type="button" class="open-enquiry-modal btn-fill-hover w-full sm:w-[180px] md:w-[190px] lg:w-[203px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] cursor-pointer transition-colors">
-                            <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans">
+                            <p class="font-[600] fontLora text-[13px] sm:text-[14px] text-white">
                                 Book a Site Visit
     
                             </p>
@@ -647,15 +677,15 @@
             <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 container">
                 <!-- Top Content Container  -->
                 <div class="flex flex-col justify-center items-center text-center w-full  px-4 sm:px-0">
-                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black font-montserrat">Location
+                    <h3 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-black fontLora">Location
                         Advantage</h3>
-                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black font-montserrat">
+                    <p class="font-[400] text-[20px] sm:text-[24px] md:text-[27px] lg:text-[30px] text-black fontLora">
                         Strategically Located Within Wave City</p>
                 </div>
 
 
                 <!-- Bottom Content Container  -->
-                <div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-4">
+                <div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-2 xl:gap-4">
 
                     <!-- Left Side Container  -->
                     <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-8 lg:gap-12 w-full lg:w-auto">
@@ -665,9 +695,9 @@
                             <div
                                 class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
                                 <img src="img/s6/Township-Advantage.png" alt=""
-                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
-                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Township Advantage</p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[15px] font-open-sans">Positioned inside an
+                                    class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain lg:object-cover xl:object-contain">
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] fontLora">Township Advantage</p>
+                                <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[15px]">Positioned inside an
                                     integrated master-planned
                                     ecosystem
                                 </p>
@@ -678,9 +708,9 @@
                                 class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
                                 <img src="img/s6/Social-Infrastructure 1.png" alt=""
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
-                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Social Infrastructure
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] fontLora">Social Infrastructure
                                 </p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[14px] font-open-sans">Schools, hospitals, and
+                                <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[14px]">Schools, hospitals, and
                                     essentials nearby
                                 </p>
                             </div>
@@ -691,8 +721,8 @@
                                 class="w-full md:w-[240px] lg:w-[277px]  p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
                                 <img src="img/s6/Urban-Accessibility 1.png" alt=""
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
-                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Urban Accessibility</p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[15px] font-open-sans">City connectivity 
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] fontLora">Urban Accessibility</p>
+                                <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[15px]">City connectivity 
                                     balanced with open surroundings
                                 </p>
                             </div>
@@ -706,9 +736,9 @@
                                 class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
                                 <img src="img/s6/Regional-Connectivity 1.png" alt=""
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
-                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Regional Connectivity
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] fontLora">Regional Connectivity
                                 </p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[14px] font-open-sans">Access to NH-24, Noida, and<br>
+                                <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[14px]">Access to NH-24, Noida, and<br>
                                     Delhi corridors
                                 </p>
                             </div>
@@ -718,9 +748,9 @@
                                 class="w-full md:w-[240px] lg:w-[277px] border-b border-[#EAC4B8] p-2 flex text-center flex-col justify-center items-center gap-2 sm:gap-3">
                                 <img src="img/s6/Investment-Growth-Zone 1.png" alt=""
                                     class="w-[40px] sm:w-[45px] md:w-[50px] h-auto object-contain">
-                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] font-montserrat">Investment Growth Zone
+                                <p class="font-[700] text-[15px] sm:text-[16px] md:text-[17px] fontLora">Investment Growth Zone
                                 </p>
-                                <p class="font-[400] text-[14px] sm:text-[15px] md:text-[14px] font-open-sans">Located with a high-development<br>
+                                <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[14px]">Located with a high-development<br>
                                     corridor
                                 </p>
                             </div>
@@ -731,7 +761,7 @@
                                 class="w-full md:w-[240px] lg:w-[277px] h-full flex justify-center md:justify-end items-end">
                                 <button type="button" class="open-enquiry-modal btn-fill-hover w-full md:w-[240px] lg:w-[277px] bg-[#DE8063] text-white gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-[2px] flex justify-center md:justify-between items-center rounded-[2px]">
                                     <p
-                                        class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] text-white text-center md:text-start font-open-sans whitespace-nowrap md:whitespace-normal">
+                                        class="font-[600] fontLora text-[14px] sm:text-[15px] md:text-[16px] text-white text-center md:text-start whitespace-nowrap md:whitespace-normal">
                                         Explore Location <br class="hidden md:block"> Highlights Nearby
                                     </p>
                                     <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
@@ -762,9 +792,9 @@
                          <!-- Card 8 - Row 4, Col 2 (Center Content) -->
                          <div
                          class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-3 min-w-0 w-full">
-                         <h4 class="font-[700] text-[18px] sm:text-[20px] md:text-[22px] font-montserrat whitespace-nowrap">Why Invest with <br/> Gulshan</h4>
+                         <h4 class="font-[700] text-[18px] sm:text-[20px] md:text-[22px] fontLora whitespace-nowrap">Why Invest with <br/> Gulshan</h4>
                          <p
-                             class="font-[400] text-[14px] md:text-[15px] max-w-full px-2 font-montserrat mb-6 sm:mb-8 md:mb-10 leading-snug">
+                             class="font-[400] text-[14px] md:text-[15px] max-w-full px-2 fontLora mb-6 sm:mb-8 md:mb-10 leading-snug">
                              At Gulshan, architecture is not a backdrop.
                              It is a presence.
                         </p>
@@ -773,7 +803,7 @@
                     <div
                         class="h-[180px] sm:h-[170px] md:h-[170px] bg-black flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            class="font-[600] fontAvenir text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 leading-snug">
                             Multiple landmark<br>residential projects<br>delivered</p>
 
                         <!-- Absolute Position Image Container  -->
@@ -789,7 +819,7 @@
                     <div
                         class="h-[180px] sm:h-[170px] md:h-[170px] bg-black flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            class="font-[600] fontAvenir text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 leading-snug">
                             Built for end-use and<br>asset appreciation</p>
 
                         <!-- Absolute Position Image Container  -->
@@ -803,9 +833,9 @@
                     <!-- Card 3 - Row 2, Col 1 -->
                     <div
                         class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-2 sm:py-3 relative">
-                        <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat" data-counter data-to="30" data-suffix="+" data-duration="2000">
+                        <p class="font-[700] fontLora text-[32px] md:text-[34px] text-black fontLora" data-counter data-to="30" data-suffix="+" data-duration="2000">
                             0</p>
-                        <p class="font-[400] text-[14px] md:text-[15px] max-w-[90%] text-center font-open-sans leading-snug px-2">
+                        <p class="font-[400] fontAvenir text-[14px] md:text-[15px] max-w-[90%] text-center leading-snug px-2">
                             Years of development<br>presence</p>
                     </div>
 
@@ -813,7 +843,7 @@
                     <div
                         class="h-[180px] sm:h-[170px] md:h-[170px] bg-[#DE8063] flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            class="font-[600] fontAvenir text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 leading-snug">
                             Construction-led<br>execution<br>model
                         </p>
 
@@ -833,9 +863,9 @@
                        <!-- Card 7 - Row 4, Col 1 -->
                        <div
                        class="h-[180px] sm:h-[170px] md:h-[170px] flex flex-col justify-center items-center text-center py-2 sm:py-3 relative">
-                       <p class="font-[700] text-[32px] md:text-[34px] text-black font-montserrat" data-counter data-to="7500" data-suffix="+" data-duration="2000">
+                       <p class="font-[700] fontLora text-[32px] md:text-[34px] text-black fontLora" data-counter data-to="7500" data-suffix="+" data-duration="2000">
                            0</p>
-                       <p class="font-[400] text-[14px] md:text-[15px] max-w-[90%] text-center font-open-sans leading-snug px-2">
+                       <p class="font-[400] fontAvenir text-[14px] md:text-[15px] max-w-[90%] text-center leading-snug px-2">
                            Trusted by Families</p>
                    </div>
 
@@ -844,7 +874,7 @@
                     <div
                         class="h-[180px] sm:h-[170px] md:h-[170px] bg-[#DE8063] flex justify-center items-center text-center py-2 sm:py-3 relative">
                         <p
-                            class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                            class="font-[600] fontAvenir text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 leading-snug">
                             Planned community<br>developments</p>
 
                         <!-- Absolute Position Image Container  -->
@@ -859,7 +889,7 @@
                      <div
                      class="h-[180px] sm:h-[170px] md:h-[170px] hidden md:flex bg-[#DE8063] justify-center items-center text-center py-2 sm:py-3 relative">
                      <p
-                         class="font-[600] text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 font-open-sans leading-snug">
+                         class="font-[600] fontAvenir text-[14px] md:text-[15px] text-center text-white max-w-[90%] px-2 leading-snug">
                          Planned community<br>developments</p>
 
                      <!-- Absolute Position Image Container  -->
@@ -882,7 +912,7 @@
                         <div
                             class="w-full md:w-[48%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-black flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
                             <p
-                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-white px-2 font-open-sans">
+                                class="font-[600] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-white px-2">
                                 Multiple landmark residential projects
                                 delivered</p>
 
@@ -897,9 +927,9 @@
                         <!-- Card 2 Content Container  -->
                         <div
                             class="h-auto md:h-full flex flex-col justify-center items-center text-center py-4 md:py-0 w-full md:w-auto lg:pb-4">
-                            <h4 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">Why Invest with Gulshan</h4>
+                            <h4 class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] fontLora">Why Invest with Gulshan</h4>
                             <p
-                                class="font-[400] text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] max-w-full md:max-w-[575px] px-4 md:px-0 font-montserrat leading-[42px] mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                                class="font-[400] text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] max-w-full md:max-w-[575px] px-4 md:px-0 fontLora leading-[42px] mb-6 sm:mb-8 md:mb-10 lg:mb-12">
                                 At Gulshan, architecture is not a backdrop.
                                 It is a presence.</p>
                         </div>
@@ -909,7 +939,7 @@
                         <div
                             class="w-full md:w-[48%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-black flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
                             <p
-                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-white px-10 font-open-sans">
+                                class="font-[600] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-white px-10">
                                 Built for end-use and asset appreciation</p>
 
                             <!-- Absolute Position Image Container  -->
@@ -926,16 +956,16 @@
                         <!-- Card 1  -->
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat" data-counter data-to="30" data-suffix="+" data-duration="2000">
+                            <p class="font-[700] fontLora text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black fontLora" data-counter data-to="30" data-suffix="+" data-duration="2000">
                                 0</p>
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center font-open-sans">
+                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center">
                                 Years of development presence</p>
                         </div>
                         <!-- Card 2  -->
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-[#DE8063] flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
                             <p
-                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center text-white max-w-[65%] px-2 font-open-sans">
+                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center text-white max-w-[65%] px-2">
                                 Construction-led execution model
                             </p>
 
@@ -955,7 +985,7 @@
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] bg-[#DE8063] flex justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
                             <p
-                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center text-white max-w-[55%] px-2 font-open-sans">
+                                class="font-[600] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center text-white max-w-[55%] px-2">
                                 Planned community developments</p>
 
                             <!-- Absolute Position Image Container  -->
@@ -968,9 +998,9 @@
                         <!-- Card 5  -->
                         <div
                             class="w-full sm:w-[48%] md:w-[32%] lg:w-[229px] h-[160px] sm:h-[170px] md:h-[180px] lg:h-[190px] flex flex-col justify-center items-center text-center py-3 sm:py-3.5 md:py-4 relative">
-                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black font-montserrat" data-counter data-to="7500" data-suffix="+" data-duration="2000">
+                            <p class="font-[700] text-[32px] sm:text-[36px] md:text-[38px] lg:text-[40px] text-black fontLora" data-counter data-to="7500" data-suffix="+" data-duration="2000">
                                 0</p>
-                            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center font-open-sans">
+                            <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] max-w-[80%] text-center">
                                 Trusted by Families</p>
                         </div>
                     </div>
@@ -980,7 +1010,7 @@
                 <!-- Bottom Button Container   -->
                 <div class="flex justify-center items-center px-4 sm:px-0">
                     <button type="button" class="open-enquiry-modal btn-fill-hover w-full sm:w-[180px] md:w-[190px] lg:w-[203px] bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center rounded-[2px] cursor-pointer transition-colors">
-                        <p class="font-[600] text-[13px] sm:text-[14px] text-white font-open-sans">
+                        <p class="font-[600] fontLora text-[13px] sm:text-[14px] text-white">
                             Book a Site Visit
 
                         </p>
@@ -1004,9 +1034,9 @@
                 <!-- Right Side Content Container  -->
                 <div
                     class="border border-[#F5E9E5] flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 py-8 sm:py-12 md:py-16 lg:py-[70px] px-4 sm:px-6 md:px-12 lg:px-20 text-center w-full lg:w-auto">
-                    <p class="font-[700] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-montserrat">About Developer</p>
+                    <p class="font-[700] fontLora text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] fontLora">About Developer</p>
                     <p
-                        class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] max-w-full lg:max-w-[729px] px-2 sm:px-0 font-open-sans">
+                        class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] max-w-full lg:max-w-[729px] px-2 sm:px-0">
                         Established in 1989, <span class="font-[700]">Gulshan Group </span>
                         has blossomed into a prominent player in India's real estate landscape, redefining
                         standards with accolades for design and quality. We imbue each venture with a touch of our
@@ -1030,10 +1060,10 @@
 
                 <!-- Top Row  -->
                 <div class="z-10 flex flex-col gap-3 sm:gap-4 text-center md:text-start mb md:pr-8 lg:pr-0">
-                    <h6 class="font-[400] text-[20px] sm:text-[24px] md:text-[26px] lg:text-[30px] leading-snug md:leading-normal">Make the Right
+                    <h6 class="font-[400] fontLora text-[20px] sm:text-[24px] md:text-[26px] lg:text-[30px] leading-snug md:leading-normal">Make the Right
                         <span class="font-[700]">Gulshan Empire <br class="hidden md:block">
                             Investment!</span> with Our Experts</h6>
-                    <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px]">Secure Your Residence at Gulshan
+                    <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px]">Secure Your Residence at Gulshan
                         Empire</p>
                 </div>
                 <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-4 z-10">
@@ -1067,21 +1097,21 @@
                                 <!-- Row 1 - Name, Phone, Email -->
                                 <div class="col-span-1 form-field">
                                     <input type="text" name="name" id="contact-name" required
-                                        class="form-input col-span-1 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
+                                        class="form-input col-span-1 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] fontAvenir md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
                                         placeholder="Name">
                                     <span class="error-message" id="contact-name-err" role="alert"></span>
                                 </div>
 
                                 <div class="col-span-1 form-field">
                                     <input type="tel" name="phone" id="contact-phone" required
-                                        class="form-input col-span-1 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
+                                        class="form-input col-span-1 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] fontAvenir md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
                                         placeholder="Phone">
                                     <span class="error-message" id="contact-phone-err" role="alert"></span>
                                 </div>
 
                                 <div class="col-span-1 form-field">
                                     <input type="email" name="email" id="contact-email" required
-                                        class="form-input col-span-1 sm:col-span-1 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
+                                        class="form-input col-span-1 sm:col-span-1 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] fontAvenir md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 min-w-0"
                                         placeholder="Email">
                                     <span class="error-message" id="contact-email-err" role="alert"></span>
                                 </div>
@@ -1089,14 +1119,14 @@
                                 <!-- Row 2 - Message spans Name+Phone+Email cols, Button in 4th -->
                                 <div class="col-span-1 sm:col-span-3 form-field">
                                     <input type="text" name="message" id="contact-message"
-                                        class="form-input col-span-1 sm:col-span-3 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 resize-none min-w-0"
+                                        class="form-input col-span-1 sm:col-span-3 w-full border-b border-[#474747] bg-transparent outline-none active:outline-none focus:outline-none font-[400] text-[14px] sm:text-[15px] fontAvenir md:text-[16px] text-black pl-2 placeholder:font-[400] placeholder:text-[14px] sm:placeholder:text-[15px] md:placeholder:text-[16px] placeholder:text-[#000000] pb-3 resize-none min-w-0"
                                         placeholder="Message">
                                     <span class="error-message" id="contact-message-err" role="alert"></span>
                                 </div>
 
                                 <button type="submit"
                                     class="btn-fill-hover col-span-1 sm:col-span-1 w-full sm:w-auto min-w-0 bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center cursor-pointer">
-                                    <p class="font-[600] text-[13px] sm:text-[14px] text-white">
+                                    <p class="font-[600] fontLora   text-[13px] sm:text-[14px] text-white">
                                         Get Consultation
                                     </p>
                                     <img src="img/icns/arr-right.svg" alt="Arrow Right Icon"
@@ -1104,7 +1134,7 @@
                                 </button>
                             </div>
                         </form>
-                        <p class="font-[400] text-[12px] sm:text-[13px] md:text-[14px] text-center md:text-start">Your information remains private
+                        <p class="font-[400] fontAvenir text-[12px] sm:text-[13px] md:text-[14px] text-center md:text-start">Your information remains private
                             and protected</p>
                     </div>
                 </div>
@@ -1121,7 +1151,7 @@
                 <img src="img/footer/bottom-logo.png" alt="Bottom Logo"
                     class="w-full max-w-[333px] h-[120px] sm:h-[140px] md:h-[150px] lg:h-[164px] object-contain">
             </div>
-            <p class="font-[400] text-[14px] sm:text-[15px] md:text-[16px] text-white text-center px-4 sm:px-0">
+            <p class="font-[400] fontAvenir text-[14px] sm:text-[15px] md:text-[16px] text-white text-center px-4 sm:px-0">
                 © Copyright 2026 Gulshan Empire. All Right Reserved.
             </p>
         </div>
@@ -1132,8 +1162,8 @@
         <div class="enquiry-modal-overlay" id="enquiry-modal-overlay"></div>
         <div class="enquiry-modal-box" role="dialog" aria-labelledby="enquiry-modal-title">
             <button type="button" class="enquiry-modal-close" id="enquiry-modal-close" aria-label="Close">&times;</button>
-            <h3 id="enquiry-modal-title" class="font-[700] text-[22px] sm:text-[24px] text-black font-montserrat mb-2">Enquire Now</h3>
-            <p class="font-[400] text-[14px] text-black/80 font-open-sans mb-6">Share your details and we’ll get back to you.</p>
+            <h3 id="enquiry-modal-title" class="font-[700] fontLora text-[22px] sm:text-[24px] text-black fontLora mb-2">Enquire Now</h3>
+            <p class="font-[400] fontAvenir text-[14px] text-black/80 mb-6">Share your details and we’ll get back to you.</p>
             <form id="enquiry-modal-form" class="enquiry-modal-form" novalidate>
                 <div class="flex flex-col gap-4">
                     <div class="form-field">
@@ -1158,12 +1188,12 @@
                     </div>
 <button type="submit"
                                     class="btn-fill-hover w-full bg-[#DE8063] text-white gap-2 px-6 py-3 rounded-[2px] flex justify-center items-center cursor-pointer transition-colors mt-2">
-                        <span class="font-[600] text-[14px] text-white">Get Consultation</span>
+                        <span class="font-[600] fontLora text-[14px] text-white">Get Consultation</span>
                         <img src="img/icns/arr-right.svg" alt="" class="w-[18px] h-auto object-contain">
                     </button>
                 </div>
             </form>
-            <p class="font-[400] text-[12px] text-black/70 mt-4">Your information remains private and protected.</p>
+            <p class="font-[400] fontAvenir text-[12px] text-black/70 mt-4">Your information remains private and protected.</p>
         </div>
     </div>
 

@@ -359,6 +359,26 @@ function attachFormValidation(form, fieldsConfig, onValidSubmit) {
     });
 }
 
+// Global function to open enquiry modal
+function openEnquiryModal() {
+    const modal = document.getElementById('enquiry-modal');
+    if (!modal) return;
+    
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+// Global function to close enquiry modal
+function closeEnquiryModal() {
+    const modal = document.getElementById('enquiry-modal');
+    if (!modal) return;
+    
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
 // Enquiry popup modal
 function initEnquiryModal() {
     const modal = document.getElementById('enquiry-modal');
@@ -368,30 +388,18 @@ function initEnquiryModal() {
 
     if (!modal) return;
 
-    function openModal() {
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
-
     // Open modal on any button/link with class open-enquiry-modal
     document.querySelectorAll('.open-enquiry-modal').forEach((el) => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            openModal();
+            openEnquiryModal();
         });
     });
-    overlay.addEventListener('click', closeModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeEnquiryModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeEnquiryModal);
 
     modal.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Escape') closeEnquiryModal();
     });
 
     if (form) {
@@ -401,7 +409,7 @@ function initEnquiryModal() {
             { name: 'email', id: '#enquiry-email', errId: 'enquiry-email-err', validator: formValidation.email },
             { name: 'message', id: '#enquiry-message', errId: 'enquiry-message-err', validator: formValidation.message }
         ];
-        attachFormValidation(form, enquiryFields, () => closeModal());
+        attachFormValidation(form, enquiryFields, () => closeEnquiryModal());
     }
 }
 
@@ -439,6 +447,8 @@ if (document.readyState === 'loading') {
         initEnquiryModal();
         initContactForm();
         initButtonFillHover();
+        // Auto-open enquiry modal after 5 seconds
+        autoOpenEnquiryModal();
     });
 } else {
     initApp();
@@ -446,5 +456,14 @@ if (document.readyState === 'loading') {
     initEnquiryModal();
     initContactForm();
     initButtonFillHover();
+    // Auto-open enquiry modal after 5 seconds
+    autoOpenEnquiryModal();
 }
 
+// Auto-open enquiry modal after 5 seconds of page load
+function autoOpenEnquiryModal() {
+    // Wait for 5 seconds (5000 milliseconds) after page load
+    setTimeout(() => {
+        openEnquiryModal();
+    }, 5000);
+}
