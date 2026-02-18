@@ -139,9 +139,12 @@ function initApp() {
     function updateNavbarOnScroll(scrollY) {
         const width = window.innerWidth;
         if (scrollY > 100) {
-            // Scrolled down - add black background and decrease logo size
+            // Scrolled down - add black background, decrease logo size, compact header
+            navbar.classList.add('navbar-scrolled');
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
             navbar.style.backdropFilter = 'blur(10px)';
+            navbar.style.paddingTop = '8px';
+            navbar.style.paddingBottom = '8px';
             navLinks.forEach(link => {
                 link.style.color = '#ffffff';
             });
@@ -150,9 +153,12 @@ function initApp() {
                 logoContainer.style.width = width >= TABLET_BREAKPOINT ? '140px' : '100px';
             }
         } else {
-            // At top - transparent background and restore logo size
+            // At top - transparent background, restore logo size and header padding
+            navbar.classList.remove('navbar-scrolled');
             navbar.style.backgroundColor = 'transparent';
             navbar.style.backdropFilter = 'none';
+            navbar.style.paddingTop = '';
+            navbar.style.paddingBottom = '';
             navLinks.forEach(link => {
                 link.style.color = '#ffffff';
             });
@@ -224,11 +230,98 @@ function initApp() {
     counterEls.forEach((el) => counterObserver.observe(el));
 }
 
+// Hero banner slider
+function initHeroSlider() {
+    const mobileSlides = document.querySelectorAll('.hero-slider-mobile .hero-slide');
+    const desktopSlides = document.querySelectorAll('.hero-slider-desktop .hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const totalSlides = 3;
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    function goToSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        mobileSlides.forEach((slide, i) => slide.classList.toggle('active', i === currentIndex));
+        desktopSlides.forEach((slide, i) => slide.classList.toggle('active', i === currentIndex));
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', i === currentIndex));
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        autoplayTimer = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoplay() {
+        if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            goToSlide(i);
+            startAutoplay();
+        });
+    });
+
+    startAutoplay();
+}
+
+// Enquiry popup modal
+function initEnquiryModal() {
+    const modal = document.getElementById('enquiry-modal');
+    const openBtn = document.getElementById('enquire-now-btn');
+    const overlay = document.getElementById('enquiry-modal-overlay');
+    const closeBtn = document.getElementById('enquiry-modal-close');
+    const form = document.getElementById('enquiry-modal-form');
+
+    if (!modal || !openBtn) return;
+
+    function openModal() {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openModal);
+    overlay.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Optional: send form data or show thank you
+            closeModal();
+            form.reset();
+        });
+    }
+}
+
 // Initialize when DOM is ready and scripts are loaded
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initApp);
+    document.addEventListener('DOMContentLoaded', () => {
+        initApp();
+        initHeroSlider();
+        initEnquiryModal();
+    });
 } else {
-    // DOM is already loaded
     initApp();
+    initHeroSlider();
+    initEnquiryModal();
 }
 
