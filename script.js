@@ -187,6 +187,9 @@ function initApp() {
         updateNavbarOnScroll(scrollY);
     });
 
+    // Set initial logo size on load: big at top, small only after scroll
+    updateNavbarOnScroll(window.scrollY || 0);
+
     // Data counter
     const counterEls = document.querySelectorAll('[data-counter]');
     const animatedCounters = new Set();
@@ -272,6 +275,90 @@ function initHeroSlider() {
     startAutoplay();
 }
 
+// --- Form validation helpers ---
+const formValidation = {
+    name(value) {
+        const v = (value || '').trim();
+        if (v.length < 2) return 'Please enter at least 2 characters';
+        if (!/^[a-zA-Z\s\u0900-\u097F]+$/.test(v)) return 'Name should contain only letters';
+        return '';
+    },
+    phone(value) {
+        const v = (value || '').replace(/\s/g, '');
+        if (!v) return 'Phone number is required';
+        const digits = v.replace(/\D/g, '');
+        if (digits.length < 10) return 'Enter a valid 10-digit phone number';
+        return '';
+    },
+    email(value) {
+        const v = (value || '').trim();
+        if (!v) return 'Email is required';
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!re.test(v)) return 'Enter a valid email address';
+        return '';
+    },
+    message(value) {
+        return ''; // optional
+    }
+};
+
+function setFieldError(inputEl, errEl, message) {
+    if (errEl) errEl.textContent = message || '';
+    if (inputEl) {
+        inputEl.classList.toggle('input-error', !!message);
+        inputEl.setAttribute('aria-invalid', !!message);
+    }
+}
+
+function validateAndSubmitForm(config, onValid) {
+    const { form, fields } = config;
+    let firstInvalid = null;
+    let valid = true;
+
+    fields.forEach(({ name, id, errId, validator }) => {
+        const input = form.querySelector(id);
+        const errEl = document.getElementById(errId);
+        const value = input ? input.value : '';
+        const error = validator ? validator(value) : '';
+        setFieldError(input, errEl, error);
+        if (error && !firstInvalid) firstInvalid = input;
+        if (error) valid = false;
+    });
+
+    if (firstInvalid) {
+        firstInvalid.focus();
+        return false;
+    }
+    if (valid && onValid) onValid();
+    return valid;
+}
+
+function attachFormValidation(form, fieldsConfig, onValidSubmit) {
+    if (!form) return;
+
+    // Clear error on input
+    form.querySelectorAll('.form-input').forEach((input) => {
+        input.addEventListener('input', () => {
+            const errId = input.id ? input.id + '-err' : null;
+            const errEl = errId ? document.getElementById(errId) : null;
+            setFieldError(input, errEl, '');
+        });
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        validateAndSubmitForm({ form, fields: fieldsConfig }, () => {
+            form.reset();
+            fieldsConfig.forEach(({ id, errId }) => {
+                const input = form.querySelector(id);
+                const errEl = document.getElementById(errId);
+                setFieldError(input, errEl, '');
+            });
+            if (typeof onValidSubmit === 'function') onValidSubmit();
+        });
+    });
+}
+
 // Enquiry popup modal
 function initEnquiryModal() {
     const modal = document.getElementById('enquiry-modal');
@@ -303,13 +390,40 @@ function initEnquiryModal() {
     });
 
     if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Optional: send form data or show thank you
-            closeModal();
-            form.reset();
-        });
+        const enquiryFields = [
+            { name: 'name', id: '#enquiry-name', errId: 'enquiry-name-err', validator: formValidation.name },
+            { name: 'phone', id: '#enquiry-phone', errId: 'enquiry-phone-err', validator: formValidation.phone },
+            { name: 'email', id: '#enquiry-email', errId: 'enquiry-email-err', validator: formValidation.email },
+            { name: 'message', id: '#enquiry-message', errId: 'enquiry-message-err', validator: formValidation.message }
+        ];
+        attachFormValidation(form, enquiryFields, () => closeModal());
     }
+}
+
+// Contact section form validation
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    const contactFields = [
+        { name: 'name', id: '#contact-name', errId: 'contact-name-err', validator: formValidation.name },
+        { name: 'phone', id: '#contact-phone', errId: 'contact-phone-err', validator: formValidation.phone },
+        { name: 'email', id: '#contact-email', errId: 'contact-email-err', validator: formValidation.email },
+        { name: 'message', id: '#contact-message', errId: 'contact-message-err', validator: formValidation.message }
+    ];
+    attachFormValidation(form, contactFields);
+}
+
+// Directional fill effect: fill originates from cursor entry point
+function initButtonFillHover() {
+    document.querySelectorAll('.btn-fill-hover').forEach((btn) => {
+        btn.addEventListener('mouseenter', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            btn.style.setProperty('--mouse-x', x + '%');
+            btn.style.setProperty('--mouse-y', y + '%');
+        });
+    });
 }
 
 // Initialize when DOM is ready and scripts are loaded
@@ -318,10 +432,14 @@ if (document.readyState === 'loading') {
         initApp();
         initHeroSlider();
         initEnquiryModal();
+        initContactForm();
+        initButtonFillHover();
     });
 } else {
     initApp();
     initHeroSlider();
     initEnquiryModal();
+    initContactForm();
+    initButtonFillHover();
 }
 
