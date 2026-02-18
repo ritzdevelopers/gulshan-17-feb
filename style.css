@@ -70,7 +70,7 @@ html, body {
 
     /* Amenities: flexible widths */
     #amenities [class*="lg:w-[415px]"] { max-width: 100%; }
-    #amenities [class*="lg:w-[613px]"] { max-width: 48%; }
+
 
     /* Location: fit cards and map */
     #location [class*="lg:w-[277px]"] { max-width: 210px; }
@@ -298,3 +298,27 @@ footer {
     background-color: #000;
 }
 
+
+@media (min-width: 1024px) and (max-width: 1357px) {
+    .div1 {
+        width: 295px !important;
+        height: 165px !important;
+    }
+    .div2 {
+        width: 295px !important;
+    }
+    .div3 {
+        height: 221px !important;
+    }
+    .div4 {
+        width: 165px !important;
+    }
+    
+    .div5 {
+        width: 100% !important;
+    }
+    .div6 {
+        width: 49.5% !important;
+    }
+      
+}
