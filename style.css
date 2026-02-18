@@ -181,6 +181,13 @@ html, body {
     background-color: #fff;
 }
 
+/* Hero dots: shift slightly lower on short viewports (e.g. 1366x650) */
+@media (max-height: 700px) and (min-width: 1024px) {
+    .hero-dots {
+        bottom: 10px;
+    }
+}
+
 /* Enquiry popup modal */
 .enquiry-modal {
     position: fixed;

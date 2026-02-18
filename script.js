@@ -362,12 +362,11 @@ function attachFormValidation(form, fieldsConfig, onValidSubmit) {
 // Enquiry popup modal
 function initEnquiryModal() {
     const modal = document.getElementById('enquiry-modal');
-    const openBtn = document.getElementById('enquire-now-btn');
     const overlay = document.getElementById('enquiry-modal-overlay');
     const closeBtn = document.getElementById('enquiry-modal-close');
     const form = document.getElementById('enquiry-modal-form');
 
-    if (!modal || !openBtn) return;
+    if (!modal) return;
 
     function openModal() {
         modal.classList.add('is-open');
@@ -381,7 +380,13 @@ function initEnquiryModal() {
         document.body.style.overflow = '';
     }
 
-    openBtn.addEventListener('click', openModal);
+    // Open modal on any button/link with class open-enquiry-modal
+    document.querySelectorAll('.open-enquiry-modal').forEach((el) => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
     overlay.addEventListener('click', closeModal);
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
