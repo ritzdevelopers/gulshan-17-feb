@@ -238,6 +238,7 @@ function initHeroSlider() {
     const mobileSlides = document.querySelectorAll('.hero-slider-mobile .hero-slide');
     const desktopSlides = document.querySelectorAll('.hero-slider-desktop .hero-slide');
     const dots = document.querySelectorAll('.hero-dot');
+    if (!mobileSlides.length && !desktopSlides.length) return;
     const totalSlides = 3;
     let currentIndex = 0;
     let autoplayTimer = null;
