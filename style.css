@@ -293,8 +293,7 @@ html, body {
 
 /* Footer background pattern */
 footer {
-    background-image: url('img/footer/footer.jpeg');
-    background-repeat: repeat;
+   
     background-color: #000;
 }
 
